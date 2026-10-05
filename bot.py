@@ -90,6 +90,101 @@ def clean_text(value):
     for old, new in replacements.items():
         text = text.replace(old, new)
 
+    # ===== POLA TYPO OCR YANG SANGAT SERING MUNCUL =====
+    # Beberapa huruf pada hasil OCR dapat berubah menjadi angka/huruf lain.
+    # Koreksi dilakukan berdasarkan konteks kata agar tidak mengubah angka hukum.
+    context_word_fixes = [
+        (r"\bRak(?=\s+asasi\b)", "Hak"),
+        (r"\bbak(?=\s+asasi\b)", "hak"),
+        (r"\bRak(?=\s+alami\b)", "Hak"),
+        (r"\bbak(?=\s+alami\b)", "hak"),
+        (r"\btnanusia\b", "manusia"),
+        (r"\btanusia\b", "manusia"),
+        (r"\bmanusia\b", "manusia"),
+        (r"\bp1tama\b", "pertama"),
+        (r"\bpe1tama\b", "pertama"),
+        (r"\bpe1ta1na\b", "pertama"),
+        (r"\bgenerasi\s+pe1tama\b", "generasi pertama"),
+        (r"\bgenerasi\s+p1tama\b", "generasi pertama"),
+        (r"\bp1lihan\b", "pilihan"),
+        (r"\bp1lihan\b", "pilihan"),
+        (r"\bp1ngertian\b", "pengertian"),
+        (r"\bp1raturan\b", "peraturan"),
+        (r"\bp1rjanjian\b", "perjanjian"),
+        (r"\bp1rlindungan\b", "perlindungan"),
+        (r"\bp1merintah\b", "pemerintah"),
+        (r"\bp1merintahan\b", "pemerintahan"),
+        (r"\bp1layanan\b", "pelayanan"),
+        (r"\bp1ndidikan\b", "pendidikan"),
+        (r"\bp1ngawasan\b", "pengawasan"),
+        (r"\bp1mbentukan\b", "pembentukan"),
+        (r"\bp1mbagian\b", "pembagian"),
+        (r"\bp1mberian\b", "pemberian"),
+        (r"\bp1ngadaan\b", "pengadaan"),
+        (r"\bp1nyelesaian\b", "penyelesaian"),
+        (r"\bp1nyelenggaraan\b", "penyelenggaraan"),
+        (r"\bp1nanganan\b", "penanganan"),
+        (r"\bp1nangkatan\b", "pengangkatan"),
+        (r"\bp1njelasan\b", "penjelasan"),
+        (r"\bp1nyataan\b", "pernyataan"),
+        (r"\bp1nyandang\b", "penyandang"),
+        (r"\bp1nyalahgunaan\b", "penyalahgunaan"),
+        (r"\bp1ngusaha\b", "pengusaha"),
+        (r"\bp1kerja\b", "pekerja"),
+        (r"\bp1kerjaan\b", "pekerjaan"),
+        (r"\bp1menuhan\b", "pemenuhan"),
+        (r"\bp1milu\b", "pemilu"),
+        (r"\bp1laksanaan\b", "pelaksanaan"),
+        (r"\bp1mbatasan\b", "pembatasan"),
+        (r"\bp1mbelaan\b", "pembelaan"),
+        (r"\bp1mbagian\b", "pembagian"),
+        (r"\bp1ngaturan\b", "pengaturan"),
+        (r"\bp1rjanjian\b", "perjanjian"),
+        (r"\bp1rtanggungjawaban\b", "pertanggungjawaban"),
+        (r"\bp1nduduk\b", "penduduk"),
+        (r"\bp1nghormatan\b", "penghormatan"),
+        (r"\bp1ngakuan\b", "pengakuan"),
+        (r"\bp1lindungan\b", "perlindungan"),
+        (r"\bp1ngadilan\b", "pengadilan"),
+        (r"\bp1ngawasan\b", "pengawasan"),
+        (r"\bp1ngetahuan\b", "pengetahuan"),
+    ]
+    for pat, repl in context_word_fixes:
+        text = re.sub(pat, repl, text, flags=re.I)
+
+    # Bentuk OCR lain yang sering muncul di modul sumber.
+    more_word_fixes = {
+        "dalarn": "dalam", "Dalarn": "Dalam", "dalar n": "dalam",
+        "rnanusia": "manusia", "Rnanusia": "Manusia",
+        "tnanusia": "manusia", "Tnanusia": "Manusia",
+        "tern1asuk": "termasuk", "ter1nasuk": "termasuk",
+        "mernberikan": "memberikan", "mernperoleh": "memperoleh",
+        "rnerupakan": "merupakan", "rnenurut": "menurut",
+        "rnenjadi": "menjadi", "rnenjelaskan": "menjelaskan",
+        "rnelakukan": "melakukan", "rnelalui": "melalui",
+        "rnasuk": "masuk", "rnasih": "masih", "rnasalah": "masalah",
+        "rnernenuhi": "memenuhi", "rnernperhatikan": "memperhatikan",
+        "rnernpunyai": "mempunyai", "rnenyatakan": "menyatakan",
+        "rnenentukan": "menentukan", "rnenyusun": "menyusun",
+        "rnernang": "memang", "rnernperoleh": "memperoleh",
+        "hakt asasi": "hak asasi", "hak asasi tnanusia": "hak asasi manusia",
+        "n1anusia": "manusia", "1nanusia": "manusia",
+        "n1emiliki": "memiliki", "1nemiliki": "memiliki",
+        "n1erupakan": "merupakan", "1nerupakan": "merupakan",
+        "n1engandung": "mengandung", "1nengandung": "mengandung",
+        "n1enghormati": "menghormati", "1nenghormati": "menghormati",
+        "n1elindungi": "melindungi", "1nelindungi": "melindungi",
+        "n1elekat": "melekat", "1nelekat": "melekat",
+        "n1artabat": "martabat", "1nartabat": "martabat",
+        "n1erampas": "merampas", "1nerampas": "merampas",
+        "n1elanggar": "melanggar", "1nelanggar": "melanggar",
+        "n1engapa": "mengapa", "1nengapa": "mengapa",
+        "n1emberikan": "memberikan", "1nemberikan": "memberikan",
+        "n1enurut": "menurut", "1nenurut": "menurut",
+    }
+    for old, new in more_word_fixes.items():
+        text = text.replace(old, new)
+
     # Koreksi angka/huruf yang sangat khas OCR pada nomor UU/pasal/tahun.
     text = re.sub(r"\b20\s*l\s*l\b", "2011", text, flags=re.I)
     text = re.sub(r"\b20\s*l\s*0\b", "2010", text, flags=re.I)
@@ -431,14 +526,43 @@ def get_item(idx):
     }
 
 
-def build_explanation(item):
-    """Pembahasan yang menjelaskan MENGAPA jawaban benar.
+def _is_substantive_explanation(explain):
+    """Mendeteksi apakah penjelasan bank soal benar-benar mengajar konsep."""
+    if not explain:
+        return False
+    low = explain.lower()
+    generic_markers = [
+        "berasal dari tes formatif pada materi sumber",
+        "jika belum yakin, ulangi kegiatan belajar",
+        "cocokkan jawaban anda dengan kunci jawaban",
+        "pelajari kembali materi",
+        "pahami kembali konsep yang diuji",
+        "jawaban yang benar adalah",
+        "pilihan tersebut paling sesuai dengan",
+    ]
+    if any(m in low for m in generic_markers):
+        return False
+    # Penjelasan yang hanya mengulang pilihan juga belum cukup substantif.
+    compact = re.sub(r"\s+", " ", low).strip(" .")
+    return len(compact) >= 60 and not compact.startswith("soal ini berasal")
 
-    Prioritas:
-    1) gunakan pembahasan asli dari bank soal jika isinya substantif;
-    2) jika pembahasan asli hanya template/generic, buat penjelasan berbasis
-       kata kunci soal dan pilihan jawaban, tanpa menambahkan rujukan sumber
-       yang tidak diperlukan.
+
+def _topic_phrase(q):
+    q = clean_text(q).strip()
+    q = re.sub(r"\s+", " ", q)
+    q = re.sub(r"^(menurut|berdasarkan)\s+.*?,\s*", "", q, flags=re.I)
+    q = re.sub(r"^(apakah|manakah|yang manakah|apa yang dimaksud dengan)\s+", "", q, flags=re.I)
+    q = re.sub(r"\b(adalah|merupakan|ialah)\s+.*$", "", q, flags=re.I)
+    return q.strip(" .?…")
+
+
+def build_explanation(item):
+    """Pembahasan substantif: menjelaskan konsep dan alasan opsi benar.
+
+    Urutan sumber:
+    1) pembahasan asli bank soal jika memang substantif;
+    2) pola khusus yang cocok dengan materi sumber;
+    3) penjelasan konseptual dari hubungan pertanyaan-jawaban.
     """
     explain = clean_text(item.get("explain", "")).strip()
     answer = item["answer"]
@@ -447,184 +571,228 @@ def build_explanation(item):
     q = clean_text(item.get("q", "")).strip()
     low = q.lower()
     opt_low = option.lower()
-    options = [clean_text(x).strip() for x in item.get("options", [])]
 
-    # Pembahasan asli dipakai bila memang menjelaskan alasan, bukan sekadar
-    # mengatakan bahwa jawaban berasal dari tes formatif.
-    generic_markers = [
-        "pahami kembali konsep yang diuji",
-        "berasal dari tes formatif pada materi sumber",
-        "jika belum yakin, ulangi kegiatan belajar",
-        "cocokkan jawaban anda dengan kunci jawaban",
-        "pelajari kembali materi",
-        "pilihan tersebut paling sesuai dengan",
-    ]
-    generic = (not explain) or any(m in explain.lower() for m in generic_markers)
-    if not generic and len(explain) >= 45:
+    if _is_substantive_explanation(explain):
         return explain
 
-    # ===== PEMBAHASAN KHUSUS YANG MEMANG MEMBUTUHKAN ALASAN =====
+    # ===== POLA KHUSUS YANG TERDAPAT LANGSUNG DALAM MODUL SUMBER =====
+    if "pengangkatan anak" in low and "memutuskan hubungan hukum" in low and "plena" in opt_low:
+        return (
+            "Adopsi Plena (Adoptio Plena): pengangkatan anak secara sempurna/penuh "
+            "yang bertujuan memutuskan hubungan hukum dengan orang tua biologis. "
+            "Karena soal menekankan adanya pemutusan hubungan hukum tersebut, "
+            "istilah yang tepat adalah adopsi plena. Berbeda dengan adopsi minus plena, "
+            "hubungan hukum dengan orang tua biologis tidak diputus sehingga hak waris "
+            "anak terhadap orang tua biologis tetap ada."
+        )
+
+    if "generasi pertama" in low and ("politik dan sipil" in opt_low or "tuntutan untuk melepaskan diri" in opt_low):
+        return (
+            "Hak asasi manusia generasi pertama: berfokus pada hak sipil dan politik "
+            "serta kebebasan individu. Generasi ini lahir dari tuntutan untuk melepaskan "
+            "diri dari absolutisme negara dan melindungi kehidupan pribadi serta otonomi "
+            "individu. Karena itu, pilihan yang menunjuk pada hak sipil-politik atau "
+            "kebebasan dari absolutisme sesuai dengan ciri generasi pertama."
+        )
+
+    if "dianggap universal" in low and ("kemanusiaan setiap orang" in opt_low or "termasuk dalam kemanusiaan" in opt_low):
+        return (
+            "HAM bersifat universal: hak tersebut melekat pada setiap manusia hanya "
+            "karena ia manusia. Universal berarti hak itu berlaku tanpa membedakan ras, "
+            "jenis kelamin, bahasa, budaya, kewarganegaraan, agama, atau latar belakang "
+            "lain. Jadi, pilihan yang menyatakan bahwa HAM termasuk dalam kemanusiaan "
+            "setiap orang adalah tepat."
+        )
+
+    if ("melekat" in low or "inheren" in low) and "sejak lahir" in opt_low:
+        return (
+            "HAM yang melekat (inheren): hak tersebut sudah ada pada diri seseorang "
+            "sejak lahir karena martabatnya sebagai manusia. Hak itu bukan hadiah dari "
+            "negara, masyarakat, atau organisasi kekuasaan. Karena itu, pilihan yang "
+            "menyebut melekat pada setiap orang sejak lahir menjelaskan makna "
+            "‘melekat’ secara tepat."
+        )
+
+    if "pandangan islam" in low and "anugerah" in opt_low:
+        return (
+            "Pandangan Islam terhadap HAM: dalam materi sumber, Islam digambarkan "
+            "menghormati hak asasi manusia dan memandangnya sebagai anugerah Tuhan. "
+            "Karena itu, pilihan tersebut tepat: HAM dipandang sebagai sesuatu yang "
+            "harus dihormati, bukan hak yang hanya berlaku bagi kelompok tertentu."
+        )
+
+    if "hubungan antara pancasila" in low and "hak asasi manusia" in low and "mencakup prinsip" in opt_low:
+        return (
+            "Pancasila dan HAM: hubungan keduanya bersifat mendukung, karena Pancasila "
+            "memuat nilai dan prinsip yang berkaitan dengan penghormatan terhadap hak "
+            "asasi manusia. Jadi, Pancasila bukan sesuatu yang bertentangan dengan HAM "
+            "atau tidak berhubungan dengannya; pilihan yang menyatakan bahwa Pancasila "
+            "mencakup prinsip-prinsip HAM adalah yang sesuai dengan materi."
+        )
+
+    if "uud 1945" in low and "universal declaration" in low:
+        return (
+            "UUD 1945 pada awalnya belum memuat banyak ketentuan HAM: materi sumber "
+            "mengaitkannya dengan waktu penyusunan UUD 1945 yang mendahului Universal "
+            "Declaration of Human Rights (UDHR) 1948. Karena itu, pilihan yang menekankan "
+            "bahwa UUD 1945 disusun sebelum adanya UDHR menjadi alasan yang sesuai dengan "
+            "pembahasan sumber."
+        )
+
+    if "universal declaration of human rights" in low and ("1948" in opt_low or "diterima" in low):
+        return (
+            "Universal Declaration of Human Rights (UDHR): deklarasi ini diterima "
+            "pada tahun 1948 dan menjadi tonggak penting dalam perkembangan perlindungan "
+            "HAM secara internasional. Karena itu, jika soal meminta tahunnya, angka 1948 "
+            "adalah penentu jawaban."
+        )
+
     if "pasal 28" in low and "pp nomor 43 tahun 1998" in low and "100 orang" in opt_low:
         return (
-            "Jawaban ini benar karena inti ketentuannya adalah kewajiban pengusaha "
-            "mempekerjakan sekurang-kurangnya 1 orang penyandang cacat untuk setiap "
-            "100 orang pekerja, dengan tetap memenuhi persyaratan jabatan dan "
-            "kualifikasi pekerjaan. Jadi, bagian yang menjadi penentu jawaban adalah "
-            "hubungan antara jumlah pekerja dan kewajiban mempekerjakan penyandang "
-            "cacat. Jika angka atau syarat tersebut diubah, makna ketentuannya juga "
-            "berubah."
+            "Ketentuan Pasal 28 PP Nomor 43 Tahun 1998: pengusaha wajib mempekerjakan "
+            "sekurang-kurangnya 1 orang penyandang cacat yang memenuhi persyaratan "
+            "jabatan dan kualifikasi pekerjaan untuk setiap 100 orang pekerja. Jadi, "
+            "jawaban benar karena memuat tiga unsur penting sekaligus: jumlah minimal "
+            "1 orang, batas setiap 100 pekerja, dan syarat jabatan/kualifikasi pekerjaan."
         )
 
     # ===== SOAL DEFINISI / PENGERTIAN =====
-    if re.search(r"\bpengertian\b|\bdefinisi\b|\bdiartikan\b|\bmaksud dari\b|\byang dimaksud\b", low):
+    if re.search(r"\bpengertian\b|\bdefinisi\b|\byang dimaksud\b|\bdiartikan\b|\bmaksud dari\b", low):
+        topic = _topic_phrase(q) or "konsep yang ditanyakan"
         return (
-            f"Jawaban {letter} benar karena pilihan tersebut memuat unsur-unsur yang "
-            f"membentuk pengertian yang sedang ditanyakan. Dalam soal definisi, yang "
-            f"dicari bukan sekadar kata yang terdengar mirip, tetapi ciri utama yang "
-            f"membedakan konsep itu dari konsep lain. Pada pilihan {letter}, unsur "
-            f"pentingnya adalah: {option}. Karena unsur tersebut sesuai dengan "
-            "konsep yang ditanyakan, pilihan ini menjadi jawaban yang paling tepat."
+            f"**{topic}:** jawaban {letter} tepat karena pilihan tersebut memuat "
+            f"unsur yang menjadi inti pengertian {topic.lower()}. Dalam soal definisi, "
+            "yang harus dicari adalah ciri yang membentuk konsep, bukan sekadar kata "
+            "yang mirip. Jadi, pilihan ini benar karena menjelaskan substansi konsep "
+            f"yang sedang diminta: {option}."
         )
 
-    # ===== SOAL TOKOH / PENDAPAT =====
-    if re.search(r"\bmenurut\b|\bpendapat\b|\bdikemukakan oleh\b|\bdiperkenalkan oleh\b|\bteori .* oleh\b", low):
+    # ===== SOAL TOKOH / TEORI =====
+    if re.search(r"\bmenurut\b|\bpendapat\b|\bdikemukakan oleh\b|\bdiperkenalkan oleh\b|\bteori .* oleh\b|\bmenafsirkan\b", low):
         return (
-            f"Jawaban {letter} benar karena soal menguji pasangan antara suatu "
-            "gagasan dan tokoh yang mengemukakannya. Pilihan yang benar harus "
-            "menghubungkan tokoh dengan gagasan yang tepat, bukan hanya menyebut "
-            "nama tokoh yang memang dikenal dalam bidang tersebut. Dalam pilihan "
-            f"{letter}, pasangan yang diberikan adalah: {option}. Itulah hubungan "
-            "yang sesuai dengan konsep yang sedang ditanyakan."
+            f"Inti pendapat: {option}. Jawaban {letter} benar karena pilihan ini "
+            "memasangkan tokoh/teori dengan gagasan yang sedang diuji. Kuncinya adalah "
+            "mengingat isi gagasannya, bukan hanya nama tokohnya; pernyataan pada "
+            f"pilihan {letter} menunjukkan substansi pendapat yang ditanyakan."
         )
 
     # ===== SOAL DASAR HUKUM / KETENTUAN =====
     if re.search(r"\bdasar hukum\b|\bdiatur dalam\b|\bdiatur oleh\b|\bketentuan\b|\bpasal\b|\buu nomor\b|\bperaturan pemerintah\b|\bperaturan presiden\b", low):
         return (
-            f"Jawaban {letter} benar karena pertanyaan meminta ketentuan yang "
-            "secara langsung mengatur hal tersebut. Pilihan yang benar bukan dipilih "
-            "karena terlihat paling umum, tetapi karena isi ketentuannya sesuai dengan "
-            f"hal yang ditanyakan. Pada pilihan {letter}, ketentuannya adalah "
-            f"{option}. Dengan mencocokkan objek yang diatur dalam soal dengan isi "
-            "ketentuan tersebut, pilihan ini yang paling tepat."
+            f"Dasar/ketentuan yang tepat: {option}. Jawaban {letter} benar karena "
+            "soal meminta aturan yang secara langsung mengatur objek yang dibahas. "
+            "Dengan demikian, penentunya bukan sekadar nama peraturan yang terdengar "
+            "berkaitan, tetapi kecocokan antara objek yang diatur dan isi ketentuannya."
         )
 
-    # ===== SOAL 'KECUALI' / 'TIDAK TERMASUK' =====
+    # ===== SOAL KECUALI / TIDAK TERMASUK =====
     if re.search(r"\bkecuali\b|\btidak termasuk\b|\bbukan\b|\btidak merupakan\b", low):
         return (
-            f"Jawaban {letter} benar karena kata kunci soal adalah "
-            "'kecuali' atau 'tidak termasuk'. Artinya, yang dicari justru satu "
-            "pilihan yang berbeda dari kelompok atau ciri yang disebutkan dalam "
-            "pertanyaan. Pilihan {letter} ({option}) menjadi jawaban karena pilihan "
-            "inilah yang tidak memenuhi kategori yang sedang ditanyakan. Jadi, hati-"
-            "hati: pada soal seperti ini, jangan mencari pilihan yang benar sebagai "
-            "anggota kelompok, tetapi cari pilihan yang menjadi pengecualian."
+            f"Jawaban {letter} benar karena kata kunci soal adalah ‘kecuali/tidak termasuk’. "
+            "Artinya, yang dicari bukan anggota kelompok yang benar, melainkan satu "
+            "pilihan yang tidak sesuai dengan kelompok tersebut. Pilihan ini tepat karena "
+            f"{option} merupakan pengecualian yang diminta soal."
         )
 
-    # ===== SOAL ANGKA / JUMLAH / WAKTU =====
+    # ===== SOAL ANGKA / WAKTU =====
     if re.search(r"\bberapa\b|\bjumlah\b|\bsetiap\b|\bselama\b|\bjangka waktu\b|\bjangka\b|\bhari\b|\bbulan\b|\btahun\b|\bpersen\b|\b%\b", low):
         return (
-            f"Jawaban {letter} benar karena soal menuntut nilai yang spesifik, yaitu "
-            f"{option}. Angka, jumlah, atau jangka waktu dalam soal hukum tidak boleh "
-            "diubah hanya karena ada pilihan yang nilainya tampak mendekati. Nilai "
-            "pada pilihan ini harus dicocokkan langsung dengan keadaan yang ditanyakan. "
-            "Karena nilai tersebut sesuai dengan kondisi soal, pilihan ini yang benar."
+            f"Nilai yang ditentukan soal: {option}. Jawaban {letter} benar karena "
+            "ketentuan yang ditanyakan bergantung pada angka, jumlah, atau jangka waktu "
+            "tertentu. Nilai pada pilihan ini sesuai dengan kondisi yang diminta, sehingga "
+            "mengubah angkanya akan mengubah makna ketentuannya."
         )
 
     # ===== SOAL CIRI / UNSUR / KARAKTERISTIK =====
     if re.search(r"\bciri\b|\bkarakteristik\b|\bunsur\b|\bsifat\b|\bterdiri dari\b|\bmeliputi\b|\bkomponen\b", low):
         return (
-            f"Jawaban {letter} benar karena pertanyaan sedang meminta ciri atau unsur "
-            "yang membentuk konsep tersebut. Pilihan yang tepat harus memiliki "
-            "hubungan langsung dengan konsep yang ditanyakan, bukan sekadar memiliki "
-            "kata yang sama. Pada pilihan {letter}, unsur yang disebut adalah "
-            f"{option}. Unsur tersebut menjawab bagian yang diminta dalam pertanyaan, "
-            "sehingga pilihan ini paling tepat."
+            f"Ciri/unsur yang diuji: {option}. Jawaban {letter} benar karena "
+            "pernyataan tersebut merupakan bagian yang membentuk atau mencirikan "
+            "konsep yang ditanyakan. Jadi, yang dicocokkan adalah hubungan antara "
+            "unsur tersebut dan konsepnya, bukan sekadar kemiripan kata."
         )
 
     # ===== SOAL SEBAB / TUJUAN / FUNGSI =====
     if re.search(r"\bmengapa\b|\bsebab\b|\btujuan\b|\bfungsi\b|\buntuk apa\b|\bmanfaat\b", low):
         return (
-            f"Jawaban {letter} benar karena soal tidak hanya menanyakan apa suatu "
-            "konsep itu, tetapi menanyakan alasan, tujuan, atau fungsinya. Pilihan "
-            f"{letter} menjawab hubungan tersebut melalui pernyataan: {option}. "
-            "Dengan demikian, pilihan ini sesuai dengan hal yang ditanyakan, yaitu "
-            "mengapa konsep tersebut ada atau apa kegunaannya dalam konteks yang "
-            "dibahas."
+            f"Alasan/fungsi: {option}. Jawaban {letter} benar karena pilihan ini "
+            "menjelaskan hubungan sebab, tujuan, atau fungsi yang diminta oleh soal. "
+            "Dengan kata lain, pilihan tersebut menjawab ‘mengapa’ atau ‘untuk apa’ "
+            "konsep itu ada dalam konteks materi."
         )
 
-    # ===== SOAL PERBANDINGAN / PEMBEDA =====
+    # ===== SOAL PERBANDINGAN =====
     if re.search(r"\bperbedaan\b|\bberbeda\b|\bperbandingan\b|\bsedangkan\b|\bsementara\b", low):
         return (
-            f"Jawaban {letter} benar karena kunci soal terletak pada pembeda antara "
-            "dua konsep yang dibandingkan. Pilihan {letter} menyatakan: {option}. "
-            "Pernyataan tersebut menjelaskan sisi yang membedakan konsep yang "
-            "ditanyakan, sehingga tidak cukup hanya melihat apakah pilihan itu benar "
-            "secara umum; yang harus dilihat adalah apakah pilihan itu benar-benar "
-            "menunjukkan perbedaannya."
+            f"Pembeda utama: {option}. Jawaban {letter} benar karena pilihan ini "
+            "menunjukkan sisi yang membedakan konsep-konsep yang dibandingkan. Pada "
+            "soal perbandingan, pernyataan yang benar secara umum belum tentu menjadi "
+            "jawaban; yang dicari adalah ciri yang benar-benar menjadi pembeda."
         )
 
     # ===== SEMUA JAWABAN =====
     if "semua jawaban" in opt_low and "benar" in opt_low:
         return (
-            "Jawaban ini benar karena seluruh pilihan yang dirangkum di dalamnya "
-            "saling sesuai dengan hal yang ditanyakan. Artinya, tidak ada satu pun "
-            "dari pernyataan sebelumnya yang bertentangan dengan konsep soal. Karena "
-            "semuanya benar, pilihan yang menyatakan 'semua jawaban benar' menjadi "
-            "kesimpulan yang tepat."
+            "Pilihan ini benar apabila seluruh pernyataan yang dirangkum di dalamnya "
+            "sesuai dengan konsep yang ditanyakan dan tidak ada yang bertentangan. "
+            "Jadi, ‘semua jawaban benar’ merupakan kesimpulan setelah setiap pernyataan "
+            "sebelumnya memenuhi unsur yang diminta soal."
         )
 
-    # ===== FALLBACK: TETAP MENJELASKAN ALASAN, BUKAN MENYEBUT SUMBER =====
-    # Ambil beberapa kata penting dari pertanyaan agar pembahasan terasa spesifik.
-    question_focus = re.sub(r"[^A-Za-zÀ-ÖØ-öø-ÿ0-9 ]", " ", q)
-    question_focus = re.sub(r"\s+", " ", question_focus).strip()
-    focus_words = [w for w in question_focus.split() if len(w) >= 5]
-    focus = " ".join(focus_words[:8]) if focus_words else "pokok pertanyaan"
-
+    # ===== FALLBACK YANG TETAP MENGAJAR =====
+    topic = _topic_phrase(q) or "konsep yang ditanyakan"
     return (
-        f"Jawaban {letter} benar karena isi pilihan tersebut menjawab langsung "
-        f"pokok yang ditanyakan, yaitu tentang {focus}. Perhatikan hubungan antara "
-        f"pertanyaan dan pilihan: pilihan {letter} menyatakan '{option}'. Pernyataan "
-        "tersebut sesuai dengan hal yang diminta, sedangkan pilihan lain harus dinilai "
-        "berdasarkan apakah isinya benar-benar menjawab pertanyaan yang sama. Jadi, "
-        "alasan memilih jawaban ini adalah kesesuaian antara konsep yang ditanyakan "
-        "dan isi pilihan, bukan sekadar karena pilihan tersebut terlihat paling umum."
+        f"Inti konsep: {option}. Jawaban {letter} benar karena pilihan tersebut "
+        f"menjelaskan hubungan yang tepat dengan {topic.lower()}. Cara memahaminya: "
+        f"ketika soal menanyakan {topic.lower()}, pernyataan yang dipilih harus memuat "
+        "unsur yang memang menjadi ciri, fungsi, akibat, atau hubungan hukum dari "
+        f"konsep tersebut. Pada pilihan ini, unsur kuncinya adalah {option}, sehingga "
+        "pilihan tersebut paling sesuai dengan pokok materi yang diuji."
     )
 
 
 def _memory_core(text, max_words=12):
-    """Memadatkan jawaban menjadi cue singkat tanpa mengubah istilah hukum utama."""
+    """Memadatkan jawaban menjadi cue singkat/mind-map, bukan salinan jawaban."""
     text = clean_text(text).strip()
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"[.]+$", "", text)
 
-    # Rapikan frasa yang terlalu panjang tetapi tetap pertahankan istilah hukum.
+    # Frasa hukum penting dipadatkan terlebih dahulu agar tidak terpotong oleh
+    # aturan penghapusan kata umum.
     phrase_fixes = [
-        (r"\bsekurang-kurangnya\b", "min. "),
+        (r"\bsekurang-kurangnya\b", "min."),
         (r"\byang memenuhi persyaratan jabatan dan kualifikasi pekerjaan\b", "sesuai jabatan/kualifikasi"),
-        (r"\byang secara tegas diberikan oleh\b", "yang diberikan oleh"),
-        (r"\bdalam rangka\b", "untuk"),
         (r"\bmerupakan delegasi kewenangan dari\b", "delegasi wewenang dari"),
         (r"\bdelegasi kewenangan dari\b", "delegasi wewenang dari"),
-        (r"\bkepada pemerintah\b", "→ pemerintah"),
         (r"\bdari rakyat kepada pemerintah\b", "rakyat → pemerintah"),
+        (r"\bkepada pemerintah\b", "→ pemerintah"),
+        (r"^semua hal yang\s+", ""),
+        (r"^hal yang\s+", ""),
+        (r"\bdalam rangka\b", "untuk"),
+        (r"\byang secara tegas diberikan oleh\b", "yang diberikan oleh"),
     ]
     for pat, repl in phrase_fixes:
         text = re.sub(pat, repl, text, flags=re.I)
 
-    # Buang pembuka yang hanya berfungsi sebagai tata bahasa soal.
+    # Ubah penghubung panjang menjadi simbol agar cue mudah dipanggil kembali.
+    text = re.sub(r"\s+merupakan\s+", " ", text, flags=re.I)
+    text = re.sub(r"\s+dan\s+", " + ", text, flags=re.I)
+    text = re.sub(r"\s+yang\s+", " ", text, flags=re.I)
+    text = re.sub(r"\s*\+\s*", " + ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    # Buang pembuka tata bahasa yang tidak membantu ingatan.
     text = re.sub(r"^(yaitu|adalah|merupakan|bahwa)\s+", "", text, flags=re.I)
     words = text.split()
     if len(words) <= max_words:
         return text
 
-    # Ambil sampai tanda baca/konjungsi besar pertama agar cue tetap berupa frasa
-    # yang mudah divisualisasikan, bukan kalimat panjang.
+    # Pertahankan bagian sebelum koma/semicolon jika sudah cukup pendek.
     parts = re.split(r"[,;]", text, maxsplit=1)
     first = parts[0].strip()
     if len(first.split()) <= max_words:
         return first
 
-    # Fallback: pertahankan kata-kata bermakna dan istilah hukum, buang kata fungsi.
     stop = {
         "yang", "dan", "atau", "dengan", "untuk", "dari", "kepada", "dalam",
         "pada", "oleh", "sebagai", "suatu", "seorang", "hal", "ini", "itu",
@@ -671,7 +839,7 @@ def build_memory_key(item):
     option = item["options"][answer]
     question = item.get("q", "")
     subject = _memory_subject(question)
-    core = _memory_core(option, max_words=11)
+    core = _memory_core(option, max_words=12)
 
     # Format utama: pemicu → inti. Ini lebih mudah dipanggil kembali daripada
     # menampilkan seluruh kalimat jawaban.
