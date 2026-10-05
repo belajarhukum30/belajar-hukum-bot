@@ -106,6 +106,204 @@ def clean_text(value):
     text = re.sub(r"\s+\d+\s+20005S62.*?(?=$|\n)", " ", text, flags=re.I)
     text = re.sub(r"\s*20005S62.*?(?=$|\n)", " ", text, flags=re.I)
 
+    # ===== NORMALISASI OCR YANG LEBIH AGRESIF, TETAPI TERBATAS =====
+    # Pola berikut sangat sering muncul pada hasil OCR buku/modul hukum.
+    # "1n" dan "n1" -> "m" hanya ketika berada di dalam kata atau pada awal kata.
+    # Angka murni tidak disentuh.
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])1n(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ])1n(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])n1(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ])n1(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<!\d)111(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ])111(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    # OCR sering membaca awalan "m" sebagai "rn".
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])rn(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])rnen", "men", text, flags=re.I)
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])rner", "mer", text, flags=re.I)
+    text = re.sub(r"(?<![A-Za-zÀ-ÖØ-öø-ÿ])rnas", "mas", text, flags=re.I)
+
+    # OCR angka/huruf yang sangat khas pada awal/akhir kata.
+    text = re.sub(r"\bl1ukum\b", "hukum", text, flags=re.I)
+    text = re.sub(r"\bhuku111\b", "hukum", text, flags=re.I)
+    text = re.sub(r"\bhukt1m\b", "hukum", text, flags=re.I)
+    text = re.sub(r"\bhak(i|i1)m\b", "hakim", text, flags=re.I)
+
+    # Beberapa bentuk OCR yang jelas dari kata Indonesia.
+    extra_wordfix = {
+        "rlierarki": "hierarki",
+        "KUI-I": "KUH",
+        "KUI-I": "KUH",
+        "timtrr": "timur",
+        "pemisaban": "pemisahan",
+        "kedauJatan": "kedaulatan",
+        "te1jadi": "terjadi",
+        "te1nasuk": "termasuk",
+        "me1nperhatikan": "memperhatikan",
+        "me1nenuhi": "memenuhi",
+        "me1nperoleh": "memperoleh",
+        "me1mpunyai": "mempunyai",
+        "men1pakan": "merupakan",
+        "kepe1ntingan": "kepentingan",
+        "pe1janjian": "perjanjian",
+        "pe1nerintahan": "pemerintahan",
+        "pe1nerintah": "pemerintah",
+        "pen1erintahan": "pemerintahan",
+        "pen1erintah": "pemerintah",
+        "pe1nberian": "pemberian",
+        "pe1nempatan": "penempatan",
+        "pe1mbagian": "pembagian",
+        "pe1mbentukan": "pembentukan",
+        "pe1ngertian": "pengertian",
+        "pe1ngadaan": "pengadaan",
+        "pe1nilihan": "pemilihan",
+        "pe1rlindungan": "perlindungan",
+        "pe1nberdayaan": "pemberdayaan",
+        "kelo1npok": "kelompok",
+        "ke1ompok": "kelompok",
+        "se1nua": "semua",
+        "sela1na": "selama",
+        "dala1n": "dalam",
+        "da1lam": "dalam",
+        "a1tau": "atau",
+        "ba1wa": "bahwa",
+        "sa1npai": "sampai",
+        "u1num": "umum",
+        "umu1n": "umum",
+        "u1num": "umum",
+        "siste1n": "sistem",
+        "sisten1": "sistem",
+        "sisteln": "sistem",
+        "sistenm": "sistem",
+        "1sjstem": "sistem",
+        "n1asyarakat": "masyarakat",
+        "1nasyarakat": "masyarakat",
+        "n1enurut": "menurut",
+        "1nenurut": "menurut",
+        "n1enjadi": "menjadi",
+        "1nenjadi": "menjadi",
+        "n1engatur": "mengatur",
+        "1nengatur": "mengatur",
+        "n1erupakan": "merupakan",
+        "1nerupakan": "merupakan",
+        "n1empunyai": "mempunyai",
+        "1nempunyai": "mempunyai",
+        "n1elakukan": "melakukan",
+        "1nelakukan": "melakukan",
+        "n1emberikan": "memberikan",
+        "1nemberikan": "memberikan",
+        "n1engenai": "mengenai",
+        "1nengenai": "mengenai",
+        "n1elalui": "melalui",
+        "1nelalui": "melalui",
+        "n1aksud": "maksud",
+        "1naksud": "maksud",
+        "n1ateri": "materi",
+        "1nateri": "materi",
+        "n1anusia": "manusia",
+        "1nanusia": "manusia",
+        "n1asa": "masa",
+        "1nasa": "masa",
+        "n1ilik": "milik",
+        "1nilik": "milik",
+        "n1aka": "maka",
+        "1naka": "maka",
+        "n1aupun": "maupun",
+        "1naupun": "maupun",
+        "n1asing-masing": "masing-masing",
+        "1nasing-masing": "masing-masing",
+        "n1emenuhi": "memenuhi",
+        "1nemenuhi": "memenuhi",
+        "n1emperoleh": "memperoleh",
+        "1nemperoleh": "memperoleh",
+        "n1emperhatikan": "memperhatikan",
+        "1nemperhatikan": "memperhatikan",
+        "n1elaksanakan": "melaksanakan",
+        "1nelaksanakan": "melaksanakan",
+        "n1engharuskan": "mengharuskan",
+        "1nengharuskan": "mengharuskan",
+        "n1enyatakan": "menyatakan",
+        "1nenyatakan": "menyatakan",
+        "n1enyusun": "menyusun",
+        "1nenyusun": "menyusun",
+        "n1emiliki": "memiliki",
+        "1nemiliki": "memiliki",
+        "n1engandung": "mengandung",
+        "1nengandung": "mengandung",
+        "n1erupakan": "merupakan",
+        "rnenjadi": "menjadi",
+        "rnenurut": "menurut",
+        "rnerupakan": "merupakan",
+        "rnasih": "masih",
+        "rnasalah": "masalah",
+        "rnelalui": "melalui",
+        "rnelakukan": "melakukan",
+        "rnernberikan": "memberikan",
+        "rnenyatakan": "menyatakan",
+        "rnenjelaskan": "menjelaskan",
+        "rnenentukan": "menentukan",
+        "rnenyusun": "menyusun",
+        "rnenurut": "menurut",
+        "rnernpunyai": "mempunyai",
+        "rnernpunyai": "mempunyai",
+        "jabatamya": "jabatannya",
+        "jabata1mya": "jabatannya",
+        "metniliki": "memiliki",
+        "me1niliki": "memiliki",
+        "me1npunyai": "mempunyai",
+        "fundan1ental": "fundamental",
+        "len1baga": "lembaga",
+        "le1nbaga": "lembaga",
+        "kepen,ilikan": "kepemilikan",
+        "kepen,ilikan": "kepemilikan",
+        "pen,erintah": "pemerintah",
+        "pen,erintahan": "pemerintahan",
+        "pen,erima": "penerima",
+        "tnata": "mata",
+        "tnasing-masing": "masing-masing",
+        "bak-hak": "hak-hak",
+        "hukun1": "hukum",
+        "hukun,": "hukum",
+        "hukUJ11": "hukum",
+        "hukutn": "hukum",
+        "hukt1m": "hukum",
+        "huktn": "hukum",
+        "Hukwn": "Hukum",
+        "ad1ninistrasi": "administrasi",
+        "Ad1ninistrasi": "Administrasi",
+        "Non1or": "Nomor",
+        "No1nor": "Nomor",
+        "Tabun": "Tahun",
+        "Ta1un": "Tahun",
+        "salab": "salah",
+        "jav,aban": "jawaban",
+        "javvaban": "jawaban",
+        "altematif": "alternatif",
+        "disiplin pegawai negeri sip ii": "disiplin pegawai negeri sipil",
+        "penundaa11": "penundaan",
+        "perb11atan": "perbuatan",
+        "peme1intah": "pemerintah",
+        "n1elanggar": "melanggar",
+        "me1nbuktikan": "membuktikan",
+        "n1e1nenuhi": "memenuhi",
+        "n1e1nberikan": "memberikan",
+        "n1e1npekerjakan": "mempekerjakan",
+        "n1e1njadi": "menjadi",
+        "n1e1n": "mem",
+        "semuajawaban": "semua jawaban",
+        "jawabanA,B,C": "jawaban A, B, dan C",
+        "jawaban A,B,C": "jawaban A, B, dan C",
+        "jawabanA,B,Csalah": "jawaban A, B, dan C salah",
+        "sen1uanya": "semuanya",
+        "the.fixed": "the fixed",
+        "parlia1nenlaty": "parliamentary",
+        "syste,n": "system",
+        "govern1nent": "government",
+        "p1·": "pr",
+        "ke-beranekaan": "keberanekaan",
+    }
+    for old, new in extra_wordfix.items():
+        text = text.replace(old, new)
+
     # OCR PDF sering membaca huruf "m" sebagai "n1" atau "111".
     # Terapkan hanya pada pola yang berada di dalam kata, agar angka 111
     # yang memang merupakan angka tidak ikut berubah.
@@ -168,6 +366,34 @@ def clean_text(value):
     text = re.sub(r"\s*\n\s*", "\n", text)
     text = re.sub(r"\s+([,.!?;:])", r"\1", text)
     text = re.sub(r"\.{2,}", "…", text)
+    # Koreksi gabungan kata yang berulang pada hasil OCR.
+    concatfix = {
+        "konsepnegara": "konsep negara",
+        "Konsepnegara": "Konsep negara",
+        "Konijnbeltmempunyai": "Konijnbelt mempunyai",
+        "Konijnbelt didukung": "Konijnbelt didukung",
+        "barangdanjasa": "barang dan jasa",
+        "peraturanperundang-undangan": "peraturan perundang-undangan",
+        "undang-undanglainnya": "undang-undang lainnya",
+        "jawabanyang": "jawaban yang",
+        "semuajawaban": "semua jawaban",
+        "ciri-ciri": "ciri-ciri",
+        "moden1": "modern",
+        "moden": "modern",
+        "yairu": "yaitu",
+        "pe1janjian": "perjanjian",
+        "pen,erintah": "pemerintah",
+        "pen,erintahan": "pemerintahan",
+    }
+    for old, new in concatfix.items():
+        text = text.replace(old, new)
+
+    # Rapikan kata yang terpecah oleh OCR dan tanda baca yang nyasar.
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ]),(?=[A-Za-zÀ-ÖØ-öø-ÿ])", "", text)
+    text = re.sub(r"(?<=[a-zà-ÿ])\.(?=[a-zà-ÿ])", "", text)
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ])\s+([,.!?;:])", r"\1", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    text = re.sub(r"\b([A-Za-zÀ-ÖØ-öø-ÿ]+)\s+([a-zà-ÿ]{1,3})\b", r"\1 \2", text)
     return text.strip()
 
 
