@@ -1,0 +1,1464 @@
+[
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa yang menjadi salah satu ciri khusus Hukum Administrasi Negara menurut materi?",
+    "options": [
+      "Adanya hubungan istimewa antara negara dan warga negara",
+      "Hanya mengatur hubungan antarindividu",
+      "Hanya mengatur tindak pidana",
+      "Hanya mengatur hubungan dagang"
+    ],
+    "answer": 0,
+    "explain": "Materi menjelaskan bahwa HAN memiliki ciri antara lain hubungan istimewa negara dan warga negara, norma mengenai kewenangan pejabat/lembaga negara, serta pejabat negara sebagai pelaksana tugas pemerintahan.",
+    "key": "HAN = negara–warga + kewenangan + pejabat",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Menurut teori residu Van Vollenhoven, lapangan HAN pada dasarnya merupakan apa?",
+    "options": [
+      "Hanya hukum tata negara",
+      "Sisa lapangan hukum setelah dikurangi bidang tertentu yang menjadi lapangan hukum lain",
+      "Seluruh hukum perdata yang berlaku",
+      "Hanya hukum pidana materiil"
+    ],
+    "answer": 1,
+    "explain": "Teori residu memandang HAN sebagai sisa lapangan hukum setelah dikurangi hukum tata negara, pidana materiil, dan perdata materiil.",
+    "key": "Van Vollenhoven = HAN = residu",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Dalam pelaksanaan tugas kesejahteraan, apa perbedaan pokok regeling dan beschikking?",
+    "options": [
+      "Keduanya selalu bersifat abstrak",
+      "Keduanya tidak termasuk instrumen pemerintahan",
+      "Regeling bersifat lebih abstrak, sedangkan beschikking konkret dan ditujukan pada sasaran tertentu",
+      "Regeling selalu individual, beschikking selalu umum"
+    ],
+    "answer": 2,
+    "explain": "Materi membedakan regeling sebagai peraturan yang substansinya lebih abstrak dengan beschikking sebagai keputusan yang konkret dan adresatnya jelas.",
+    "key": "Regeling = abstrak; beschikking = konkret",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Perbuatan materiil pemerintah paling tepat dipahami sebagai...",
+    "options": [
+      "Peraturan tertulis yang bersifat umum",
+      "Putusan hakim dalam perkara pidana",
+      "Perjanjian privat antarwarga",
+      "Perbuatan nyata yang dilakukan pemerintah dalam menjalankan tugas pemerintahan"
+    ],
+    "answer": 3,
+    "explain": "Perbuatan materiil adalah tindakan nyata pemerintah, misalnya meresmikan pembangunan atau melakukan kegiatan pemerintahan secara langsung.",
+    "key": "Materiele daad = tindakan nyata",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Mengapa hukum tentang aparatur negara penting dalam HAN?",
+    "options": [
+      "Karena mengatur kedudukan, kewenangan, dan pelaksanaan tugas aparatur negara",
+      "Karena hanya mengatur kontrak dagang",
+      "Karena menggantikan seluruh hukum pidana",
+      "Karena hanya mengatur organisasi masyarakat"
+    ],
+    "answer": 0,
+    "explain": "Aparatur merupakan pelaksana fungsi pemerintahan, sehingga kedudukan, kewenangan, tugas, dan tanggung jawabnya menjadi bagian penting dari HAN.",
+    "key": "Aparatur = kewenangan + tugas + tanggung jawab",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pengelolaan Barang Milik Negara memerlukan aturan hukum?",
+    "options": [
+      "Agar barang negara tidak perlu dicatat",
+      "Agar penggunaan dan pemanfaatan barang milik negara dilakukan secara tertib dan dapat dipertanggungjawabkan",
+      "Agar semua barang negara dapat dijual bebas",
+      "Agar barang negara menjadi milik pribadi pejabat"
+    ],
+    "answer": 1,
+    "explain": "Barang milik negara merupakan aset publik sehingga penggunaannya harus tertib, sesuai kewenangan, dan dapat dipertanggungjawabkan.",
+    "key": "BMN = tertib + manfaat + tanggung jawab",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa tujuan utama perlindungan hukum bagi masyarakat dalam penyelenggaraan pemerintahan?",
+    "options": [
+      "Menghapus pengawasan terhadap pemerintah",
+      "Membatasi hak masyarakat untuk menggugat",
+      "Mencegah atau memperbaiki tindakan pemerintah yang merugikan hak masyarakat",
+      "Memberikan kekuasaan tanpa batas kepada pejabat"
+    ],
+    "answer": 2,
+    "explain": "Perlindungan hukum memberi mekanisme agar masyarakat dapat memperoleh perlindungan ketika tindakan pemerintahan merugikan atau melanggar haknya.",
+    "key": "Perlindungan hukum = kontrol tindakan pemerintah",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pengelolaan keuangan negara termasuk bidang HAN?",
+    "options": [
+      "Karena uang negara merupakan harta pribadi pejabat",
+      "Karena keuangan negara tidak membutuhkan aturan",
+      "Karena hanya perusahaan swasta yang mengelola anggaran",
+      "Karena penggunaan keuangan negara merupakan bagian dari tindakan dan tanggung jawab pemerintahan yang harus diatur dan diawasi"
+    ],
+    "answer": 3,
+    "explain": "Keuangan negara berkaitan langsung dengan tindakan pemerintahan dan penggunaan sumber daya publik sehingga harus tunduk pada aturan, kewenangan, dan pertanggungjawaban.",
+    "key": "Keuangan negara = publik + kewenangan + akuntabilitas",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 7",
+    "test": "Materi Tambahan",
+    "q": "Apa prinsip penting keterbukaan informasi publik bagi masyarakat?",
+    "options": [
+      "Memberikan akses informasi publik sesuai ketentuan hukum sehingga masyarakat dapat mengawasi penyelenggaraan negara",
+      "Membuka semua informasi tanpa batas",
+      "Menutup seluruh informasi pemerintah",
+      "Memberikan informasi hanya kepada pejabat"
+    ],
+    "answer": 0,
+    "explain": "Keterbukaan informasi mendukung transparansi dan pengawasan publik, tetapi pelaksanaannya tetap mengikuti ketentuan mengenai informasi yang dapat dibuka dan yang dikecualikan.",
+    "key": "KIP = akses informasi + transparansi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pelayanan publik harus memperhatikan strategic vision?",
+    "options": [
+      "Karena pelayanan publik tidak menimbulkan dampak",
+      "Karena kebijakan pelayanan perlu memperhitungkan dampaknya bagi masa depan",
+      "Karena pemerintah hanya perlu memikirkan hasil hari ini",
+      "Karena masa depan tidak berkaitan dengan kebijakan"
+    ],
+    "answer": 1,
+    "explain": "Materi menjelaskan strategic vision sebagai keharusan untuk mempertimbangkan kemungkinan dampak kebijakan di masa mendatang, misalnya melalui analisis dampak lingkungan.",
+    "key": "Strategic vision = pikirkan dampak ke depan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Apa hubungan pelayanan publik dengan kesejahteraan sosial menurut materi HAN?",
+    "options": [
+      "Kesejahteraan hanya menjadi urusan individu",
+      "Pelayanan publik hanya untuk kepentingan pejabat",
+      "Pelayanan publik merupakan instrumen penting negara untuk memenuhi kebutuhan masyarakat dan menciptakan kesejahteraan",
+      "Pelayanan publik tidak berhubungan dengan kesejahteraan"
+    ],
+    "answer": 2,
+    "explain": "Ketergantungan masyarakat pada negara membuat pelayanan publik menjadi sarana penting untuk memenuhi kebutuhan dan mendukung terciptanya kesejahteraan sosial.",
+    "key": "Pelayanan publik → kesejahteraan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Administrasi Negara",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Mengapa negara memiliki posisi strategis dalam hukum kesejahteraan sosial?",
+    "options": [
+      "Karena negara tidak memiliki tanggung jawab sosial",
+      "Karena kesejahteraan hanya ditentukan pasar",
+      "Karena masyarakat tidak mempunyai hak apa pun",
+      "Karena negara melalui pemerintahan memiliki kewajiban dan kemampuan untuk menyelenggarakan pelayanan serta perlindungan sosial"
+    ],
+    "answer": 3,
+    "explain": "Materi mengaitkan tujuan negara dengan kesejahteraan umum dan menunjukkan peran negara dalam pelayanan serta perlindungan kelompok rentan.",
+    "key": "Negara = pelindung kesejahteraan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa salah satu persoalan penting dalam mempelajari keberlakuan KUHPerdata setelah kemerdekaan?",
+    "options": [
+      "Menilai bagian-bagian KUHPerdata yang masih sesuai dengan perkembangan hukum Indonesia",
+      "Menganggap seluruh KUHPerdata otomatis tidak berlaku",
+      "Menghapus seluruh hukum perdata",
+      "Menganggap KUHPerdata sebagai hukum pidana"
+    ],
+    "answer": 0,
+    "explain": "Materi menekankan bahwa mahasiswa perlu memahami sejarah KUHPerdata dan menilai keberlakuannya setelah kemerdekaan, termasuk bagian yang tidak lagi sesuai dengan landasan kolonialnya.",
+    "key": "KUHPerdata = sejarah + keberlakuan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Siapa yang disebut subjek hukum dalam hukum perdata?",
+    "options": [
+      "Hanya perusahaan besar",
+      "Pihak yang dapat mempunyai hak dan kewajiban hukum",
+      "Hanya orang yang sudah menikah",
+      "Hanya pejabat negara"
+    ],
+    "answer": 1,
+    "explain": "Subjek hukum adalah pihak yang dapat menjadi pemegang hak dan kewajiban. Dalam hukum perdata, manusia dan badan hukum dapat menjadi subjek hukum.",
+    "key": "Subjek hukum = pemegang hak/kewajiban",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa fungsi pendewasaan dalam hukum perdata?",
+    "options": [
+      "Membuat seseorang otomatis menjadi badan hukum",
+      "Meniadakan hak keperdataan",
+      "Memberikan kecakapan tertentu kepada orang yang belum dewasa sesuai ketentuan hukum",
+      "Menghapus seluruh kewajiban hukum"
+    ],
+    "answer": 2,
+    "explain": "Pendewasaan berkaitan dengan kecakapan bertindak dalam hukum perdata, sehingga orang yang belum dewasa dapat memperoleh kemampuan tertentu sesuai aturan.",
+    "key": "Pendewasaan = kecakapan hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Mengapa domisili penting dalam hukum perdata?",
+    "options": [
+      "Untuk menentukan kewarganegaraan seseorang",
+      "Untuk menghapus identitas seseorang",
+      "Untuk menentukan jenis kelamin seseorang",
+      "Untuk menentukan tempat seseorang dianggap hadir dalam pelaksanaan hak dan kewajiban serta kepentingan hukum tertentu"
+    ],
+    "answer": 3,
+    "explain": "Materi menjelaskan domisili sebagai tempat seseorang oleh hukum dianggap selalu hadir. Domisili diperlukan antara lain untuk kepastian hukum dan kompetensi relatif pengadilan.",
+    "key": "Domisili = tempat dianggap hadir",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa fungsi utama catatan sipil?",
+    "options": [
+      "Mencatat peristiwa penting mengenai keadaan seseorang, seperti kelahiran, perkawinan, dan kematian",
+      "Mencatat seluruh transaksi jual beli",
+      "Mencatat semua perkara pidana",
+      "Mencatat semua kontrak dagang"
+    ],
+    "answer": 0,
+    "explain": "Catatan sipil berfungsi mencatat peristiwa penting yang menentukan status atau keadaan keperdataan seseorang sejak kelahiran sampai kematian.",
+    "key": "Catatan sipil = status keperdataan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa saja tiga kelompok akibat perkawinan yang dibahas dalam materi?",
+    "options": [
+      "Hanya soal kewarganegaraan",
+      "Hubungan suami istri, harta perkawinan, serta hubungan suami istri terhadap anak",
+      "Hanya soal warisan",
+      "Hanya soal pidana"
+    ],
+    "answer": 1,
+    "explain": "Materi menguraikan akibat perkawinan terhadap hubungan suami istri, harta perkawinan, serta hak dan kewajiban terhadap anak.",
+    "key": "Perkawinan = suami-istri + harta + anak",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Kapan perwalian pada prinsipnya muncul dalam konsep UU Perkawinan yang dibahas materi?",
+    "options": [
+      "Hanya setelah anak berusia dewasa",
+      "Setiap kali anak mempunyai pekerjaan",
+      "Ketika kekuasaan orang tua tidak lagi dapat berfungsi terhadap anak yang masih di bawah umur",
+      "Setiap kali orang tua masih hidup"
+    ],
+    "answer": 2,
+    "explain": "Materi menjelaskan bahwa perwalian muncul ketika kekuasaan orang tua tidak lagi dapat berfungsi, sehingga keluarga terdekat dapat bertindak sebagai wali untuk memenuhi kebutuhan anak.",
+    "key": "Perwalian = saat kekuasaan orang tua tidak berfungsi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa ciri utama adopsi plena (adoptio plena)?",
+    "options": [
+      "Hubungan biologis tetap seluruhnya sama",
+      "Anak tidak memperoleh kedudukan dalam keluarga angkat",
+      "Adopsi hanya mengubah nama tanpa akibat hukum",
+      "Hubungan hukum anak dengan orang tua biologis terputus dan anak memperoleh kedudukan penuh dalam keluarga angkat"
+    ],
+    "answer": 3,
+    "explain": "Adopsi plena merupakan pengangkatan anak secara penuh. Ciri pentingnya adalah terputusnya hubungan hukum dengan orang tua biologis dan masuknya anak secara penuh ke dalam keluarga angkat.",
+    "key": "Adopsi plena = putus hubungan biologis hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud hak kebendaan dalam konteks hukum benda?",
+    "options": [
+      "Hak yang memberikan kekuasaan langsung terhadap suatu benda dan dapat dipertahankan terhadap pihak lain sesuai sifat haknya",
+      "Hak yang hanya berlaku dalam perjanjian pribadi",
+      "Hak politik untuk memilih",
+      "Hak pidana untuk menghukum"
+    ],
+    "answer": 0,
+    "explain": "Hukum benda membahas hubungan hukum yang bersifat kebendaan, termasuk hak kebendaan yang memberikan kekuasaan langsung terhadap objek benda.",
+    "key": "Hak kebendaan = kekuasaan langsung atas benda",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 7",
+    "test": "Materi Tambahan",
+    "q": "Apa perbedaan jaminan umum dan jaminan khusus?",
+    "options": [
+      "Keduanya selalu menunjuk satu benda tertentu",
+      "Jaminan umum mencakup seluruh kekayaan debitur, sedangkan jaminan khusus menunjuk benda tertentu sebagai jaminan",
+      "Jaminan umum selalu berupa tanah",
+      "Jaminan khusus tidak memiliki objek"
+    ],
+    "answer": 1,
+    "explain": "Materi mengaitkan jaminan umum dengan Pasal 1131 KUHPerdata, yaitu seluruh kekayaan debitur menjadi jaminan bagi perikatan, sedangkan jaminan khusus menunjuk objek tertentu.",
+    "key": "Jaminan umum = semua harta; khusus = benda tertentu",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Apa syarat penting agar pewarisan dapat terjadi?",
+    "options": [
+      "Hanya harus ada perjanjian jual beli",
+      "Hanya harus ada utang",
+      "Adanya orang yang meninggal dan pihak yang dapat menerima harta peninggalan menurut ketentuan hukum",
+      "Tidak perlu ada kematian"
+    ],
+    "answer": 2,
+    "explain": "Pewarisan berkaitan dengan beralihnya harta peninggalan karena kematian kepada ahli waris atau pihak yang berhak menurut hukum.",
+    "key": "Waris = kematian + harta peninggalan + penerima",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 10",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud perikatan dalam hukum perdata?",
+    "options": [
+      "Hubungan politik antara negara dan warga",
+      "Hubungan pidana antara polisi dan tersangka",
+      "Hubungan sosial tanpa akibat hukum",
+      "Hubungan hukum antara dua pihak, di mana satu pihak berhak menuntut sesuatu dan pihak lain berkewajiban memenuhinya"
+    ],
+    "answer": 3,
+    "explain": "Materi mendefinisikan perikatan sebagai hubungan hukum antara dua pihak: pihak yang satu berhak menuntut suatu hal dan pihak lainnya berkewajiban memenuhi tuntutan tersebut.",
+    "key": "Perikatan = hak menuntut + kewajiban memenuhi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Perdata",
+    "module": "Modul 10",
+    "test": "Materi Tambahan",
+    "q": "Apa perbedaan utama perikatan yang lahir dari undang-undang dan perjanjian?",
+    "options": [
+      "Perikatan dari perjanjian memerlukan kehendak para pihak untuk mengikatkan diri, sedangkan perikatan dari undang-undang tidak bergantung pada kehendak tersebut",
+      "Keduanya selalu membutuhkan persetujuan hakim",
+      "Perikatan dari undang-undang selalu berbentuk kontrak",
+      "Perikatan dari perjanjian tidak menimbulkan kewajiban"
+    ],
+    "answer": 0,
+    "explain": "Materi menekankan unsur kehendak sebagai pembeda utama: perjanjian lahir dari kehendak para pihak, sedangkan perikatan karena undang-undang timbul berdasarkan ketentuan hukum.",
+    "key": "Perjanjian = kehendak; UU = ketentuan hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa fokus utama Hukum Tata Negara menurut materi?",
+    "options": [
+      "Hanya mengatur perdagangan internasional",
+      "Mengatur struktur ketatanegaraan, kewenangan lembaga negara, hubungan antarlembaga, serta kedudukan warga negara",
+      "Hanya mengatur kontrak privat",
+      "Hanya mengatur tindak pidana"
+    ],
+    "answer": 1,
+    "explain": "HTN membahas organisasi negara, kewenangan lembaga negara, hubungan antarlembaga, serta kedudukan warga negara dan haknya dalam sistem ketatanegaraan.",
+    "key": "HTN = struktur + kewenangan + warga negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa yang disebut sumber hukum materiil HTN Indonesia dalam materi?",
+    "options": [
+      "Peraturan desa saja",
+      "Putusan pengadilan asing",
+      "Pancasila",
+      "KUHPerdata"
+    ],
+    "answer": 2,
+    "explain": "Pancasila disebut sebagai sumber hukum materiil HTN Indonesia karena menjadi falsafah dasar negara dan cita hukum yang menjiwai peraturan hukum.",
+    "key": "Pancasila = sumber materiil HTN",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa fungsi konstitusi yang berkaitan dengan pembatasan kekuasaan?",
+    "options": [
+      "Memberikan kekuasaan tanpa batas",
+      "Menghapus seluruh lembaga negara",
+      "Menjadikan pemerintah bebas dari hukum",
+      "Menentukan dan membatasi kewenangan organ negara agar kekuasaan tidak dijalankan tanpa batas"
+    ],
+    "answer": 3,
+    "explain": "Konstitusi tidak hanya mengatur organisasi negara, tetapi juga menetapkan pembagian dan pembatasan kekuasaan secara fundamental.",
+    "key": "Konstitusi = atur + batasi kekuasaan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa bentuk negara Indonesia menurut UUD 1945?",
+    "options": [
+      "Negara kesatuan yang berbentuk republik",
+      "Negara federal berbentuk kerajaan",
+      "Konfederasi berbentuk republik",
+      "Negara kesatuan berbentuk monarki"
+    ],
+    "answer": 0,
+    "explain": "Pasal 1 ayat (1) UUD 1945 menyatakan Indonesia ialah Negara Kesatuan yang berbentuk Republik.",
+    "key": "Indonesia = kesatuan + republik",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Dalam negara federal, apa yang menjadi salah satu persoalan utama hubungan pusat dan negara bagian?",
+    "options": [
+      "Penghapusan kekuasaan pemerintah pusat",
+      "Pembagian kekuasaan antara pemerintah federal dan pemerintah negara bagian",
+      "Penghapusan seluruh negara bagian",
+      "Penyeragaman semua kebijakan tanpa konstitusi"
+    ],
+    "answer": 1,
+    "explain": "Materi menjelaskan bahwa ciri penting negara federal adalah pembagian kekuasaan antara pemerintah federal dan negara bagian, yang diatur dalam konstitusi.",
+    "key": "Federal = bagi kekuasaan pusat–bagian",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Mengapa kekuasaan kehakiman harus independen?",
+    "options": [
+      "Agar pemerintah dapat mengatur putusan",
+      "Agar legislatif dapat memerintah hakim",
+      "Untuk melindungi kebebasan warga negara dan mencegah kekuasaan kehakiman dipengaruhi cabang kekuasaan lain",
+      "Agar hakim dapat membuat hukum sesuka hati"
+    ],
+    "answer": 2,
+    "explain": "Materi menekankan independensi dan imparsialitas kekuasaan kehakiman sebagai sarana melindungi kebebasan warga negara dan mendukung checks and balances.",
+    "key": "Yudisial independen = lindungi kebebasan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud kewarganegaraan dalam perspektif hukum?",
+    "options": [
+      "Sekadar tempat tinggal sementara",
+      "Sekadar identitas budaya",
+      "Sekadar pekerjaan seseorang",
+      "Status hukum yang menghubungkan seseorang dengan suatu negara dan menimbulkan hak serta kewajiban tertentu"
+    ],
+    "answer": 3,
+    "explain": "Kewarganegaraan merupakan status hukum seseorang dalam hubungan dengan negara yang membawa konsekuensi hak dan kewajiban.",
+    "key": "Kewarganegaraan = status hukum + hak/kewajiban",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa fungsi pemilu dalam negara demokrasi?",
+    "options": [
+      "Menjadi sarana partisipasi rakyat untuk memilih wakil dan/atau pemimpin sesuai sistem yang berlaku",
+      "Menghapus kedaulatan rakyat",
+      "Menggantikan seluruh lembaga peradilan",
+      "Membatasi warga agar tidak memilih"
+    ],
+    "answer": 0,
+    "explain": "Pemilu merupakan mekanisme penting dalam demokrasi untuk menyalurkan kedaulatan rakyat melalui pilihan politik yang diatur hukum.",
+    "key": "Pemilu = saluran kedaulatan rakyat",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Mengapa partai politik penting dalam sistem demokrasi?",
+    "options": [
+      "Karena partai tidak berhubungan dengan rakyat",
+      "Karena menjadi salah satu sarana partisipasi dan penyaluran aspirasi politik masyarakat",
+      "Karena partai menggantikan pengadilan",
+      "Karena partai menghapus pemilu"
+    ],
+    "answer": 1,
+    "explain": "Materi membahas partai politik sebagai organisasi yang berperan dalam proses demokrasi, termasuk pendidikan politik dan penyaluran aspirasi.",
+    "key": "Parpol = partisipasi + aspirasi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 7",
+    "test": "Materi Tambahan",
+    "q": "Apa kewenangan utama MPR menurut UUD 1945 setelah perubahan?",
+    "options": [
+      "Mengangkat seluruh hakim secara langsung",
+      "Menjalankan seluruh kekuasaan eksekutif",
+      "Mengubah dan menetapkan UUD",
+      "Membentuk semua putusan pengadilan"
+    ],
+    "answer": 2,
+    "explain": "UUD 1945 Pasal 3 memberikan kewenangan kepada MPR untuk mengubah dan menetapkan UUD, selain kewenangan tertentu lainnya.",
+    "key": "MPR = ubah + tetapkan UUD",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Apa kedudukan Presiden dalam sistem pemerintahan Indonesia menurut UUD 1945?",
+    "options": [
+      "Hanya menjadi simbol negara tanpa kekuasaan pemerintahan",
+      "Menjadi ketua lembaga peradilan",
+      "Berada di bawah DPR dalam menjalankan pemerintahan",
+      "Memegang kekuasaan pemerintahan menurut UUD"
+    ],
+    "answer": 3,
+    "explain": "Pasal 4 ayat (1) UUD 1945 menyatakan Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut UUD.",
+    "key": "Presiden = pemegang kekuasaan pemerintahan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Hukum Tata Negara",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pembentukan Mahkamah Konstitusi penting bagi kekuasaan kehakiman Indonesia?",
+    "options": [
+      "Karena MK memiliki kewenangan konstitusional tertentu termasuk menguji undang-undang terhadap UUD",
+      "Karena MK menggantikan semua pengadilan",
+      "Karena MK menjalankan fungsi legislatif",
+      "Karena MK menjadi bagian dari pemerintah"
+    ],
+    "answer": 0,
+    "explain": "Materi menjelaskan penguatan kekuasaan kehakiman setelah perubahan UUD 1945, termasuk pembentukan MK sebagai lembaga yang berwenang antara lain menguji UU terhadap UUD.",
+    "key": "MK = uji UU terhadap UUD",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Siapa yang dikenal sebagai tokoh yang sistematis mengembangkan Ilmu Negara melalui Allgemeine Staatslehre?",
+    "options": [
+      "John Locke",
+      "Georg Jellinek",
+      "Montesquieu",
+      "Hans Kelsen"
+    ],
+    "answer": 1,
+    "explain": "Materi menyebut istilah staatslehre dan mengaitkannya dengan karya Georg Jellinek, Allgemeine Staatslehre, sehingga Jellinek dikenal sebagai Bapak Ilmu Negara.",
+    "key": "Jellinek = Allgemeine Staatslehre",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa objek utama penyelidikan Ilmu Negara?",
+    "options": [
+      "Hanya kontrak antarwarga",
+      "Hanya sistem perdagangan",
+      "Negara secara umum, termasuk asal mula, hakikat, dan bentuk-bentuk negara",
+      "Hanya putusan pengadilan"
+    ],
+    "answer": 2,
+    "explain": "Ilmu Negara mempelajari negara secara umum, abstrak, dan universal, termasuk asal mula, sifat hakikat, serta bentuk-bentuk negara.",
+    "key": "Ilmu Negara = negara secara umum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud unsur negara dalam pembahasan Ilmu Negara?",
+    "options": [
+      "Hanya adanya partai politik",
+      "Hanya adanya konstitusi tertulis",
+      "Hanya adanya mata uang",
+      "Unsur-unsur dasar yang harus ada agar suatu organisasi dapat disebut negara"
+    ],
+    "answer": 3,
+    "explain": "Pembahasan teori negara mencakup pengertian negara dan unsur-unsur yang membentuk keberadaan negara.",
+    "key": "Negara = unsur dasar negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Mengapa teori asal mula negara dipelajari dalam Ilmu Negara?",
+    "options": [
+      "Untuk memahami berbagai penjelasan tentang bagaimana negara muncul dan berkembang",
+      "Untuk menentukan harga barang",
+      "Untuk menentukan hasil pemilu tertentu",
+      "Untuk mengganti hukum pidana"
+    ],
+    "answer": 0,
+    "explain": "Teori asal mula negara membantu menjelaskan bagaimana negara dipahami muncul, baik melalui teori ketuhanan, perjanjian, kekuatan, maupun pendekatan lainnya yang dibahas dalam ilmu negara.",
+    "key": "Asal mula = teori lahirnya negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud legitimasi kekuasaan?",
+    "options": [
+      "Kekayaan pejabat",
+      "Dasar yang membuat kekuasaan dianggap sah atau dapat diterima",
+      "Kekuatan fisik semata",
+      "Jumlah penduduk semata"
+    ],
+    "answer": 1,
+    "explain": "Legitimasi berkaitan dengan alasan atau dasar mengapa kekuasaan diakui sah oleh pihak yang diperintah atau menurut sistem yang berlaku.",
+    "key": "Legitimasi = dasar sah kekuasaan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Mengapa teori kedaulatan penting dalam pembahasan legitimasi kekuasaan?",
+    "options": [
+      "Karena hanya membahas hukum privat",
+      "Karena hanya membahas wilayah negara",
+      "Karena teori tersebut membahas siapa yang dipandang sebagai pemilik atau sumber kedaulatan tertinggi",
+      "Karena hanya membahas perdagangan"
+    ],
+    "answer": 2,
+    "explain": "Materi membahas pemilik kekuasaan melalui teori kedaulatan, sehingga pertanyaan mengenai siapa pemegang kekuasaan tertinggi menjadi pokok kajian.",
+    "key": "Kedaulatan = siapa pemilik kekuasaan tertinggi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa dasar klasifikasi negara yang dibahas dalam Ilmu Negara?",
+    "options": [
+      "Hanya berdasarkan luas wilayah",
+      "Hanya berdasarkan jumlah penduduk",
+      "Hanya berdasarkan warna bendera",
+      "Pengelompokan negara berdasarkan ciri atau bentuk tertentu yang digunakan untuk membandingkan negara"
+    ],
+    "answer": 3,
+    "explain": "Klasifikasi negara digunakan untuk mengelompokkan negara berdasarkan karakteristik tertentu sehingga bentuk dan sifat negara dapat dibandingkan secara sistematis.",
+    "key": "Klasifikasi = kelompok berdasarkan ciri",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa manfaat mempelajari klasifikasi negara?",
+    "options": [
+      "Memudahkan pemahaman terhadap persamaan dan perbedaan berbagai bentuk negara",
+      "Menghapus perbedaan antarnegara",
+      "Menentukan negara mana yang paling kaya",
+      "Menggantikan konstitusi negara"
+    ],
+    "answer": 0,
+    "explain": "Dengan klasifikasi, berbagai negara dapat dianalisis berdasarkan kategori tertentu sehingga persamaan dan perbedaannya lebih mudah dipahami.",
+    "key": "Klasifikasi = bandingkan negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa perbedaan dasar negara bersusunan tunggal dan jamak?",
+    "options": [
+      "Keduanya selalu memiliki struktur identik",
+      "Negara tunggal memiliki satu susunan negara utama, sedangkan negara jamak terdiri dari satuan-satuan yang membentuk susunan bersama",
+      "Negara tunggal selalu monarki",
+      "Negara jamak tidak memiliki pemerintah"
+    ],
+    "answer": 1,
+    "explain": "Materi susunan negara membedakan negara bersusunan tunggal dan jamak berdasarkan struktur organisasi kekuasaannya.",
+    "key": "Susunan = tunggal vs jamak",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pembagian kekuasaan diperlukan?",
+    "options": [
+      "Agar hukum tidak berlaku",
+      "Agar pemerintah bebas dari pengawasan",
+      "Untuk mencegah pemusatan kekuasaan dan membantu mengendalikan penggunaan kekuasaan negara",
+      "Agar satu lembaga menguasai semuanya"
+    ],
+    "answer": 2,
+    "explain": "Pembatasan kekuasaan dilakukan antara lain melalui pembagian kekuasaan agar kekuasaan tidak terpusat pada satu tangan atau satu lembaga.",
+    "key": "Pembagian kekuasaan = cegah pemusatan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa gagasan utama checks and balances?",
+    "options": [
+      "Satu lembaga menjadi penguasa mutlak",
+      "Semua lembaga harus tunduk pada satu pejabat",
+      "Tidak boleh ada pengawasan antarlembaga",
+      "Masing-masing cabang atau organ kekuasaan dapat saling mengawasi dan mengimbangi"
+    ],
+    "answer": 3,
+    "explain": "Checks and balances dirancang agar kekuasaan tidak berjalan tanpa kontrol melalui mekanisme saling mengawasi dan mengimbangi.",
+    "key": "Checks & balances = saling kontrol",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Ilmu Negara",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa tujuan negara yang dibahas dalam teori negara pada dasarnya berkaitan dengan apa?",
+    "options": [
+      "Penyelenggaraan kehidupan bersama untuk mencapai tujuan yang hendak diwujudkan negara",
+      "Hanya keuntungan pejabat",
+      "Hanya kepentingan kelompok tertentu",
+      "Hanya pertumbuhan penduduk"
+    ],
+    "answer": 0,
+    "explain": "Kajian hakikat dan tujuan negara melihat negara sebagai organisasi yang memiliki tujuan dalam mengatur kehidupan bersama dan mewujudkan kepentingan umum menurut teori yang dianut.",
+    "key": "Tujuan negara = arah penyelenggaraan negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa tujuan utama Pendidikan Kewarganegaraan di perguruan tinggi menurut materi?",
+    "options": [
+      "Menghapus pendidikan Pancasila",
+      "Membekali mahasiswa agar memahami hubungan warga negara dengan negara dan menjadi warga negara yang dapat diandalkan",
+      "Membekali mahasiswa hanya untuk bekerja di pemerintahan",
+      "Mengajarkan hukum pidana saja"
+    ],
+    "answer": 1,
+    "explain": "Materi menempatkan PKn sebagai pendidikan untuk membekali mahasiswa dengan pengetahuan dan kemampuan dasar mengenai hubungan warga negara dan negara serta pendidikan pendahuluan bela negara.",
+    "key": "PKn = warga negara yang bertanggung jawab",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Mengapa PKn memiliki visi holistik-eklektis?",
+    "options": [
+      "Karena hanya mengajarkan hafalan",
+      "Karena tidak memiliki landasan nilai",
+      "Karena menggabungkan berbagai tradisi pendidikan untuk membentuk warga negara secara utuh",
+      "Karena hanya menggunakan satu teori pendidikan"
+    ],
+    "answer": 2,
+    "explain": "Materi menjelaskan visi holistik-eklektis dengan memadukan tradisi seperti perenialisme, esensialisme, progresivisme, dan rekonstruksionisme.",
+    "key": "PKn = holistik + eklektis",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa perbedaan pokok antara warga negara dan kewarganegaraan?",
+    "options": [
+      "Keduanya selalu berarti hal yang sama",
+      "Warga negara hanya berarti penduduk asing",
+      "Kewarganegaraan hanya berarti budaya",
+      "Warga negara menunjuk pada orangnya, sedangkan kewarganegaraan menunjuk pada status hukum yang menghubungkan seseorang dengan negara"
+    ],
+    "answer": 3,
+    "explain": "Pembedaan konsep membantu memahami bahwa warga negara adalah subjeknya, sedangkan kewarganegaraan merupakan status hukum dalam hubungan dengan negara.",
+    "key": "Warga negara = orang; kewarganegaraan = status",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Mengapa identitas nasional penting bagi kehidupan berbangsa?",
+    "options": [
+      "Karena menjadi ciri bersama yang membedakan dan mempersatukan suatu bangsa",
+      "Karena menghapus keberagaman",
+      "Karena hanya berlaku bagi pemerintah",
+      "Karena tidak berkaitan dengan persatuan"
+    ],
+    "answer": 0,
+    "explain": "Identitas nasional berfungsi sebagai ciri dan jati diri bersama yang dapat memperkuat rasa kebangsaan di tengah keberagaman.",
+    "key": "Identitas nasional = jati diri bersama",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Mengapa HAM disebut universal?",
+    "options": [
+      "Karena hanya berlaku bagi kelompok mayoritas",
+      "Karena melekat pada setiap manusia tanpa membedakan latar belakang manusia tersebut",
+      "Karena hanya berlaku bagi warga negara tertentu",
+      "Karena hanya diberikan negara"
+    ],
+    "answer": 1,
+    "explain": "Materi menegaskan universalitas HAM: hak kemanusiaan melekat pada setiap orang, bukan karena pemberian negara atau status kelompok tertentu.",
+    "key": "HAM universal = melekat pada semua manusia",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa ciri utama HAM generasi pertama?",
+    "options": [
+      "Hak solidaritas internasional saja",
+      "Hak perusahaan untuk berdagang",
+      "Hak sipil dan politik serta kebebasan individu",
+      "Hak ekonomi dan sosial saja"
+    ],
+    "answer": 2,
+    "explain": "Materi menguraikan generasi pertama sebagai hak sipil dan politik yang berkaitan dengan kebebasan dan perlindungan individu dari kekuasaan yang sewenang-wenang.",
+    "key": "Generasi 1 = sipil + politik",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa arti supremasi hukum?",
+    "options": [
+      "Pemerintah berada di atas hukum",
+      "Hukum hanya berlaku bagi rakyat",
+      "Hakim boleh mengabaikan hukum",
+      "Hukum menjadi kekuasaan tertinggi dan semua pihak, termasuk pemerintah, harus tunduk padanya"
+    ],
+    "answer": 3,
+    "explain": "Materi mendefinisikan supremasi hukum sebagai prinsip bahwa hukum adalah yang tertinggi dan semua individu termasuk pemerintah harus tunduk kepadanya.",
+    "key": "Supremasi hukum = semua tunduk hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Mengapa konstitusi penting dalam negara?",
+    "options": [
+      "Karena mengatur dasar penyelenggaraan negara dan hubungan kekuasaan serta hak warga negara",
+      "Karena hanya mengatur perdagangan",
+      "Karena menggantikan semua undang-undang",
+      "Karena hanya berlaku bagi hakim"
+    ],
+    "answer": 0,
+    "explain": "Konstitusi menjadi dasar penyelenggaraan negara dan mengatur struktur kekuasaan serta hak dan kewajiban dalam kehidupan bernegara.",
+    "key": "Konstitusi = dasar negara",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud integrasi nasional?",
+    "options": [
+      "Proses membentuk negara baru",
+      "Proses mempersatukan berbagai unsur masyarakat dalam satu kesatuan bangsa dan negara",
+      "Proses memisahkan kelompok masyarakat",
+      "Proses menghapus budaya daerah"
+    ],
+    "answer": 1,
+    "explain": "Integrasi nasional berkaitan dengan proses membangun kesatuan dalam masyarakat yang beragam agar kehidupan berbangsa dan bernegara tetap utuh.",
+    "key": "Integrasi = menyatukan keberagaman",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa inti Wawasan Nusantara dalam kehidupan berbangsa?",
+    "options": [
+      "Cara pandang untuk memisahkan daerah",
+      "Cara pandang yang menolak persatuan",
+      "Cara pandang bangsa Indonesia terhadap diri dan lingkungannya sebagai satu kesatuan wilayah dan kehidupan nasional",
+      "Cara pandang yang hanya berfokus pada satu pulau"
+    ],
+    "answer": 2,
+    "explain": "Wawasan Nusantara menekankan cara pandang nasional terhadap wilayah dan kehidupan bangsa Indonesia sebagai satu kesatuan.",
+    "key": "Wawasan Nusantara = cara pandang kesatuan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud globalisasi dalam materi PKn?",
+    "options": [
+      "Proses menutup hubungan antarnegara",
+      "Proses menghapus teknologi",
+      "Proses membatasi pertukaran budaya",
+      "Proses integrasi dan interkoneksi antarnegara, pasar, budaya, dan individu di seluruh dunia"
+    ],
+    "answer": 3,
+    "explain": "Glosarium materi menjelaskan globalisasi sebagai proses integrasi dan interkoneksi antara negara, pasar, budaya, dan individu di seluruh dunia.",
+    "key": "Globalisasi = interkoneksi dunia",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pendidikan Kewarganegaraan",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud ketahanan nasional?",
+    "options": [
+      "Kemampuan bangsa menghadapi dan mengatasi ancaman, gangguan, hambatan, dan tantangan dalam pembangunan nasional",
+      "Kemampuan negara hanya dalam perang",
+      "Kemampuan ekonomi tanpa aspek lain",
+      "Kemampuan pemerintah menghindari semua perubahan"
+    ],
+    "answer": 0,
+    "explain": "Materi menjelaskan ketahanan nasional sebagai kemampuan menghadapi dan mengatasi berbagai ancaman, gangguan, hambatan, dan tantangan dalam perjalanan pembangunan nasional.",
+    "key": "Ketahanan = hadapi AGHT",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa fungsi Pengantar Ilmu Hukum bagi mahasiswa hukum?",
+    "options": [
+      "Hanya mengajarkan prosedur pengadilan",
+      "Memberikan dasar pemahaman tentang konsep dan istilah umum yang digunakan dalam ilmu hukum",
+      "Memberikan spesialisasi litigasi saja",
+      "Menggantikan semua mata kuliah hukum"
+    ],
+    "answer": 1,
+    "explain": "PIH merupakan mata kuliah pengantar yang membangun pemahaman dasar tentang hukum sebelum mahasiswa mempelajari cabang hukum secara lebih khusus.",
+    "key": "PIH = fondasi ilmu hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Mengapa hukum berkaitan erat dengan masyarakat?",
+    "options": [
+      "Karena hukum tidak berhubungan dengan perilaku",
+      "Karena masyarakat tidak membutuhkan norma",
+      "Karena hukum mengatur kehidupan bersama dan hubungan antaranggota masyarakat",
+      "Karena hukum hanya berlaku di pengadilan"
+    ],
+    "answer": 2,
+    "explain": "Materi membahas hubungan masyarakat dan hukum karena hukum berfungsi mengatur tingkah laku dan hubungan dalam kehidupan sosial.",
+    "key": "Hukum = pengatur hidup bersama",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa salah satu tujuan hukum yang utama?",
+    "options": [
+      "Menciptakan kekacauan",
+      "Memberi kekuasaan tanpa batas",
+      "Menghapus seluruh norma sosial",
+      "Mewujudkan ketertiban dan keadilan dalam kehidupan masyarakat"
+    ],
+    "answer": 3,
+    "explain": "Tujuan hukum dibahas antara lain dalam kaitannya dengan ketertiban, keadilan, kepastian, dan perlindungan kepentingan masyarakat.",
+    "key": "Tujuan hukum = tertib + adil",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa pembeda utama norma hukum dari norma sosial lainnya?",
+    "options": [
+      "Norma hukum memiliki sifat mengikat dan dapat dipaksakan melalui mekanisme yang diakui negara",
+      "Norma hukum tidak memiliki sanksi",
+      "Norma hukum hanya berupa kebiasaan",
+      "Norma hukum tidak mengatur perilaku"
+    ],
+    "answer": 0,
+    "explain": "Materi membandingkan norma hukum dengan norma sosial lain, termasuk karakter mengikat dan adanya mekanisme sanksi atau pemaksaan yang terorganisasi.",
+    "key": "Norma hukum = mengikat + sanksi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud hukum objektif?",
+    "options": [
+      "Pendapat ahli hukum",
+      "Kumpulan aturan hukum yang mengatur hubungan dan perilaku secara umum",
+      "Hak pribadi seseorang saja",
+      "Kekuasaan hakim saja"
+    ],
+    "answer": 1,
+    "explain": "Hukum objektif menunjuk pada norma atau aturan hukum yang berlaku secara umum, sedangkan hukum subjektif menunjuk pada hak yang dimiliki subjek hukum.",
+    "key": "Objektif = aturan; subjektif = hak",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud perbuatan melawan hukum secara umum?",
+    "options": [
+      "Perbuatan tanpa akibat hukum",
+      "Perbuatan yang hanya dilakukan hakim",
+      "Perbuatan yang bertentangan dengan hukum dan dapat menimbulkan akibat hukum bagi pelakunya",
+      "Perbuatan yang selalu dibenarkan hukum"
+    ],
+    "answer": 2,
+    "explain": "Materi membedakan perbuatan hukum, perbuatan melawan hukum, dan perbuatan lainnya berdasarkan akibat dan hubungan hukumnya.",
+    "key": "PMH = bertentangan hukum + akibat",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud sumber hukum materiil?",
+    "options": [
+      "Bentuk resmi suatu peraturan",
+      "Nomor halaman buku",
+      "Nama pengadilan",
+      "Faktor atau keadaan yang memengaruhi isi hukum"
+    ],
+    "answer": 3,
+    "explain": "Sumber hukum materiil berkaitan dengan faktor yang menentukan isi atau substansi hukum, sedangkan sumber formal berkaitan dengan bentuk yang membuat hukum dikenal dan berlaku.",
+    "key": "Materiil = isi; formal = bentuk",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa contoh sumber hukum formal?",
+    "options": [
+      "Undang-undang sebagai bentuk hukum yang ditetapkan melalui prosedur yang diakui",
+      "Kondisi ekonomi semata",
+      "Nilai moral pribadi semata",
+      "Jumlah penduduk"
+    ],
+    "answer": 0,
+    "explain": "Sumber hukum formal adalah bentuk yang membuat suatu kaidah menjadi hukum yang berlaku dan dapat dikenali, salah satunya undang-undang.",
+    "key": "Formal = bentuk berlakunya hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 7",
+    "test": "Materi Tambahan",
+    "q": "Mengapa hukum digolongkan ke dalam berbagai klasifikasi?",
+    "options": [
+      "Agar hukum tidak dapat dipelajari",
+      "Agar bidang dan karakter hukum dapat dipahami secara lebih sistematis",
+      "Agar hukum menjadi tidak berlaku",
+      "Agar semua hukum menjadi sama"
+    ],
+    "answer": 1,
+    "explain": "Penggolongan hukum membantu mahasiswa memahami hukum berdasarkan kriteria tertentu sehingga pembahasannya lebih sistematis.",
+    "key": "Klasifikasi = sistematisasi hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Apa pokok perhatian mazhab sejarah dalam ilmu hukum?",
+    "options": [
+      "Hukum selalu identik dengan perintah hakim",
+      "Hukum tidak dipengaruhi masyarakat",
+      "Perkembangan hukum yang berkaitan dengan sejarah dan kehidupan masyarakat",
+      "Hukum hanya berasal dari matematika"
+    ],
+    "answer": 2,
+    "explain": "Mazhab sejarah melihat hukum dalam kaitannya dengan perkembangan masyarakat dan sejarahnya, bukan semata-mata sebagai aturan yang dibuat secara abstrak.",
+    "key": "Mazhab sejarah = hukum + masyarakat",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Apa perhatian utama mazhab positivisme hukum?",
+    "options": [
+      "Menganggap hukum hanya kebiasaan pribadi",
+      "Menolak seluruh peraturan tertulis",
+      "Menganggap moral pribadi selalu identik dengan hukum",
+      "Memahami hukum sebagai aturan yang berlaku menurut sumber dan pembentukannya dalam sistem hukum positif"
+    ],
+    "answer": 3,
+    "explain": "Positivisme hukum menekankan hukum positif sebagai hukum yang ditetapkan atau diakui dalam sistem hukum, sehingga keberlakuan hukum dianalisis dari sumber formalnya.",
+    "key": "Positivisme = hukum positif",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Mengapa penafsiran hukum diperlukan?",
+    "options": [
+      "Untuk menentukan makna dan penerapan ketentuan hukum terhadap persoalan konkret, terutama ketika rumusannya perlu ditafsirkan",
+      "Untuk menghapus semua undang-undang",
+      "Untuk menggantikan konstitusi",
+      "Untuk membuat perkara tanpa dasar hukum"
+    ],
+    "answer": 0,
+    "explain": "Penafsiran membantu menemukan makna ketentuan hukum agar dapat diterapkan secara tepat terhadap peristiwa konkret.",
+    "key": "Interpretasi = temukan makna hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Pengantar Ilmu Hukum",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Apa tujuan pengisian kekosongan hukum?",
+    "options": [
+      "Membuat hukum pidana baru secara bebas",
+      "Memberikan dasar penyelesaian ketika tidak terdapat aturan yang secara langsung mengatur persoalan yang dihadapi",
+      "Membiarkan perkara tanpa penyelesaian",
+      "Menghapus kewajiban hakim"
+    ],
+    "answer": 1,
+    "explain": "Materi membahas penemuan hukum untuk mengisi kekosongan sehingga persoalan hukum tetap dapat diselesaikan melalui metode yang dibenarkan.",
+    "key": "Kekosongan = temukan hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud sistem hukum secara umum?",
+    "options": [
+      "Hanya satu undang-undang",
+      "Hanya putusan pengadilan",
+      "Kesatuan unsur-unsur hukum yang saling berhubungan dan bekerja sebagai suatu sistem",
+      "Kumpulan aturan yang tidak berhubungan"
+    ],
+    "answer": 2,
+    "explain": "Pendekatan sistem melihat hukum sebagai kumpulan unsur yang saling berhubungan, bukan sebagai aturan yang berdiri sendiri-sendiri.",
+    "key": "Sistem hukum = unsur saling terhubung",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Apa yang dimaksud hukum adat dalam materi Sistem Hukum Indonesia?",
+    "options": [
+      "Hanya hukum pidana kolonial",
+      "Hanya hukum internasional",
+      "Hanya hukum tertulis negara",
+      "Hukum yang tumbuh dan hidup dalam masyarakat adat serta menjadi bagian dari perkembangan sistem hukum Indonesia"
+    ],
+    "answer": 3,
+    "explain": "Materi membahas hukum adat sebagai hukum yang hidup dalam masyarakat dan kedudukannya dalam sistem hukum nasional.",
+    "key": "Hukum adat = hukum yang hidup",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 2",
+    "test": "Materi Tambahan",
+    "q": "Mengapa dasar hukum berlakunya hukum adat penting dipelajari?",
+    "options": [
+      "Untuk memahami kedudukan hukum adat dalam sistem hukum nasional",
+      "Untuk menghapus hukum adat",
+      "Untuk menjadikan semua adat sebagai undang-undang",
+      "Untuk menghilangkan masyarakat adat"
+    ],
+    "answer": 0,
+    "explain": "Pembahasan dasar hukum membantu menjelaskan kapan dan bagaimana hukum adat diakui serta ditempatkan dalam sistem hukum Indonesia.",
+    "key": "Adat = pahami dasar keberlakuannya",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 3",
+    "test": "Materi Tambahan",
+    "q": "Apa yang menjadi sumber utama hukum Islam yang dibahas dalam materi?",
+    "options": [
+      "Hanya kebiasaan perdagangan",
+      "Al-Qur’an dan sumber-sumber hukum Islam yang diakui dalam kajiannya",
+      "KUHPerdata saja",
+      "Hanya peraturan daerah"
+    ],
+    "answer": 1,
+    "explain": "Materi sistem hukum Islam membahas pengertian dan sumber hukum Islam, dengan Al-Qur’an sebagai sumber utama bersama sumber lain yang diakui dalam hukum Islam.",
+    "key": "Islam = Al-Qur’an + sumber hukum",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 4",
+    "test": "Materi Tambahan",
+    "q": "Apa fokus Hukum Tata Negara Indonesia dalam Sistem Hukum Indonesia?",
+    "options": [
+      "Mengatur kontrak sewa saja",
+      "Mengatur tindak pidana saja",
+      "Mengatur organisasi dan struktur ketatanegaraan serta hubungan kewenangan dalam negara",
+      "Mengatur jual beli antarwarga"
+    ],
+    "answer": 2,
+    "explain": "Modul HTN Indonesia membahas istilah, pengertian, dan struktur ketatanegaraan sebagai bagian dari sistem hukum Indonesia.",
+    "key": "HTN = struktur ketatanegaraan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Apa salah satu pembagian utama dalam hukum perdata?",
+    "options": [
+      "Hanya hukum pidana dan hukum tata negara",
+      "Hanya hukum internasional",
+      "Hanya hukum administrasi",
+      "Hukum perdata materiil dan bidang-bidang khusus seperti hukum orang, keluarga, benda, waris, dan perikatan"
+    ],
+    "answer": 3,
+    "explain": "Modul hukum perdata dalam Sistem Hukum Indonesia menguraikan bagian-bagian hukum perdata dan keterkaitannya dengan sejarah politik hukum serta perkembangan hukum nasional.",
+    "key": "Perdata = orang + keluarga + benda + waris + perikatan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 5",
+    "test": "Materi Tambahan",
+    "q": "Mengapa hukum dagang, bisnis, dan ekonomi dibahas bersama dalam sistem hukum Indonesia?",
+    "options": [
+      "Karena ketiganya berkaitan dengan hubungan hukum dalam kegiatan ekonomi dan perdagangan",
+      "Karena semuanya merupakan hukum pidana",
+      "Karena semuanya hanya mengatur keluarga",
+      "Karena semuanya tidak memiliki hubungan hukum"
+    ],
+    "answer": 0,
+    "explain": "Materi menempatkan hukum dagang, bisnis, dan ekonomi sebagai bidang yang berhubungan dengan aktivitas ekonomi dan hubungan hukum dalam dunia usaha.",
+    "key": "Dagang/bisnis/ekonomi = hubungan ekonomi",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 6",
+    "test": "Materi Tambahan",
+    "q": "Apa karakter utama Hukum Administrasi Negara dalam sistem hukum Indonesia?",
+    "options": [
+      "Mengatur pidana militer saja",
+      "Mengatur tindakan, kewenangan, dan penyelenggaraan administrasi pemerintahan",
+      "Mengatur warisan keluarga",
+      "Mengatur kontrak jual beli pribadi saja"
+    ],
+    "answer": 1,
+    "explain": "HAN berkaitan dengan penyelenggaraan pemerintahan, kewenangan pejabat, instrumen administrasi, pelayanan publik, dan hubungan pemerintah dengan masyarakat.",
+    "key": "HAN = administrasi pemerintahan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 7",
+    "test": "Materi Tambahan",
+    "q": "Mengapa pembagian bidang hukum penting dalam sistem hukum Indonesia?",
+    "options": [
+      "Agar hanya satu bidang hukum yang berlaku",
+      "Agar masyarakat tidak mengenal hukum",
+      "Agar berbagai hubungan hukum dapat dianalisis berdasarkan objek, fungsi, dan karakter aturan yang relevan",
+      "Agar hukum menjadi terpisah tanpa hubungan"
+    ],
+    "answer": 2,
+    "explain": "Sistem hukum terdiri dari berbagai bidang yang memiliki objek dan fungsi berbeda tetapi tetap saling berkaitan dalam satu sistem hukum nasional.",
+    "key": "Bidang hukum = beda fungsi, satu sistem",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 8",
+    "test": "Materi Tambahan",
+    "q": "Apa manfaat mempelajari hubungan antarbidang hukum dalam Sistem Hukum Indonesia?",
+    "options": [
+      "Agar setiap perkara hanya memakai satu aturan",
+      "Agar hukum tidak dapat diterapkan",
+      "Agar semua cabang hukum menjadi sama",
+      "Membantu memahami bahwa satu persoalan dapat bersinggungan dengan beberapa cabang hukum"
+    ],
+    "answer": 3,
+    "explain": "Pendekatan sistem menunjukkan bahwa bidang hukum saling berhubungan sehingga suatu persoalan dapat memiliki aspek perdata, administrasi, tata negara, atau bidang lainnya.",
+    "key": "Sistem = antarbidang saling terkait",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 9",
+    "test": "Materi Tambahan",
+    "q": "Apa tujuan mempelajari perkembangan sistem hukum Indonesia?",
+    "options": [
+      "Memahami bagaimana berbagai unsur hukum berkembang dan berinteraksi dalam pembentukan sistem hukum nasional",
+      "Menghapus sejarah hukum",
+      "Menolak seluruh hukum yang ada",
+      "Membatasi hukum hanya pada masa kolonial"
+    ],
+    "answer": 0,
+    "explain": "Mempelajari perkembangan sistem hukum membantu melihat proses pembentukan dan perubahan hukum Indonesia, termasuk pengaruh sejarah dan berbagai sumber hukum.",
+    "key": "Sistem hukum = sejarah + perkembangan",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  },
+  {
+    "course": "Sistem Hukum Indonesia",
+    "module": "Modul 1",
+    "test": "Materi Tambahan",
+    "q": "Mengapa sistem hukum tidak cukup dipahami hanya dengan menghafal undang-undang?",
+    "options": [
+      "Karena semua hukum bersifat lisan",
+      "Karena hukum juga memiliki lembaga, proses, asas, sumber, dan hubungan antarbidang yang bekerja bersama",
+      "Karena undang-undang tidak penting",
+      "Karena hukum tidak memiliki aturan"
+    ],
+    "answer": 1,
+    "explain": "Pendekatan sistem menuntut pemahaman hubungan antarunsur hukum, termasuk aturan, lembaga, proses, dan bidang hukum yang saling memengaruhi.",
+    "key": "Pahami sistem, bukan hafalan pasal saja",
+    "source": "Materi PDF kuliah",
+    "generated": true
+  }
+]
