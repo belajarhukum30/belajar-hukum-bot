@@ -1,6 +1,16 @@
-# Belajar Hukum — Telegram Quiz Bot
+# Belajar Hukum — Telegram Quiz Bot (Versi Bank Soal Besar)
 
-Satu bot Telegram untuk 7 mata kuliah:
+Bot Telegram untuk belajar 7 mata kuliah hukum.
+
+## Isi
+- Bank awal: 398 soal yang diekstrak dari bagian Tes Formatif pada 7 PDF kuliah yang diberikan.
+- Pilih mata kuliah → modul → kuis.
+- Pembahasan singkat dan sumber modul ditampilkan setelah jawaban.
+- Skor pengguna tersimpan di SQLite.
+- Soal yang salah dicatat dan dapat diulang dengan `/salah`.
+- Tidak ada token Telegram di repository ini.
+
+## Mata kuliah
 1. Pengantar Ilmu Hukum
 2. Hukum Administrasi Negara
 3. Hukum Perdata
@@ -10,11 +20,12 @@ Satu bot Telegram untuk 7 mata kuliah:
 7. Sistem Hukum Indonesia
 
 ## Menjalankan
-Set environment variable `BOT_TOKEN` dengan token BotFather, lalu:
+Set environment variable `BOT_TOKEN`, lalu:
 
 ```bash
 pip install -r requirements.txt
 python bot.py
 ```
 
-Jangan pernah memasukkan token Telegram ke GitHub atau README.
+## Catatan
+Bank ini adalah versi pertama yang memprioritaskan soal Tes Formatif agar cepat dapat dipakai. Bank dapat diperbesar lagi dengan mengambil soal dari bagian Latihan dan mengembangkan soal turunan dari materi/rangkuman, dengan tetap menjaga agar isi bersumber dari PDF kuliah.
