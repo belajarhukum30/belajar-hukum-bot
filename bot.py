@@ -19,38 +19,155 @@ COURSES = sorted({str(q.get("course", "")).strip() for q in QUESTIONS if q.get("
 
 
 def clean_text(value):
+    """Membersihkan typo OCR PDF tanpa mengubah substansi soal."""
     if value is None:
         return ""
     text = str(value)
 
-    # Artefak nomor halaman / header PDF yang ikut terbaca OCR
+    # Buang artefak header/footer dan nomor halaman yang ikut terbaca OCR.
     text = re.sub(r"\s*20005S62_ADPU4332.*?(?=$|\n)", " ", text, flags=re.I)
     text = re.sub(r"\s*20005603_1SIP4131.*?(?=$|\n)", " ", text, flags=re.I)
-    text = re.sub(r"\s*HKUM4201\s*/\s*MODUL.*?(?=$|\n)", " ", text, flags=re.I)
-    text = re.sub(r"\s*Cocok[ck]a?n?l?a?h?\s+jawaban.*$", "", text, flags=re.I)
+    text = re.sub(r"\s*HKUM420[129]\s*/\s*MODUL.*?(?=$|\n)", " ", text, flags=re.I)
+    text = re.sub(r"\s*ADPU4332\s*/\s*MODU[Ll]\s*\d+.*?(?=$|\n)", " ", text, flags=re.I)
+    text = re.sub(r"\s*Cocok[ck]a?n?l?a?h?.*$", "", text, flags=re.I)
     text = re.sub(r"\s*Cocokkanlah.*$", "", text, flags=re.I)
     text = re.sub(r"\s*Daftar Pustaka.*$", "", text, flags=re.I)
 
+    # Koreksi OCR yang berulang pada PDF sumber.
     replacements = {
-        "huku1n": "hukum", "Huku1n": "Hukum", "hu.kum": "hukum",
-        "pen1erintah": "pemerintah", "Pen1erintah": "Pemerintah",
+        "hukUJ11": "hukum", "hukUJ11": "hukum", "huku1n": "hukum",
+        "Huku1n": "Hukum", "hukutn": "hukum", "huktn": "hukum",
+        "hu.kum": "hukum", "Hukwn": "Hukum",
         "ad1ninistrasi": "administrasi", "Ad1ninistrasi": "Administrasi",
+        "pen1erintah": "pemerintah", "Pen1erintah": "Pemerintah",
+        "pen1erintahan": "pemerintahan", "pen1erintaban": "pemerintahan",
         "pe1nerintah": "pemerintah", "Pe1nerintah": "Pemerintah",
-        "n1enjadi": "menjadi", "n1engatur": "mengatur", "n1erupakan": "merupakan",
-        "n1empunyai": "mempunyai", "n1elakukan": "melakukan", "n1emberikan": "memberikan",
-        "n1asyarakat": "masyarakat", "n1aksud": "maksud", "n1engenai": "mengenai",
-        "n1engapa": "mengapa", "n1elalui": "melalui", "n1asing-masing": "masing-masing",
-        "pe1nilihan": "pemilihan", "pe1ngadaan": "pengadaan", "pen1gadaan": "pengadaan",
-        "per1aturan": "peraturan", "pe1rlindungan": "perlindungan", "se1nua": "semua",
-        "sela1na": "selama", "dala1n": "dalam",
+        "n1enjadi": "menjadi", "n1engatur": "mengatur",
+        "n1erupakan": "merupakan", "n1empunyai": "mempunyai",
+        "n1elakukan": "melakukan", "n1emberikan": "memberikan",
+        "n1asyarakat": "masyarakat", "n1aksud": "maksud",
+        "n1engenai": "mengenai", "n1engapa": "mengapa",
+        "n1elalui": "melalui", "n1asing-masing": "masing-masing",
+        "pe1nilihan": "pemilihan", "pe1ngadaan": "pengadaan",
+        "pen1gadaan": "pengadaan", "per1aturan": "peraturan",
+        "pe1rlindungan": "perlindungan", "se1nua": "semua",
+        "sela1na": "selama", "dala1n": "dalam", "Dala1n": "Dalam",
+        "a1tau": "atau", "A1tau": "Atau", "ba1wa": "bahwa",
+        "Ba1wa": "Bahwa", "sa1npai": "sampai", "Sa1npai": "Sampai",
+        "ter1nasuk": "termasuk", "ke1ompok": "kelompok",
+        "ke1ompok": "kelompok", "kelo1npok": "kelompok",
+        "pe1ayanan": "pelayanan", "pelaya11an": "pelayanan",
+        "penyakit": "penyakit", "penyebaran": "penyebaran",
+        "111elalui": "melalui", "111erupakan": "merupakan",
+        "111empunyai": "mempunyai", "111elakukan": "melakukan",
+        "1nenjadi": "menjadi", "1nengatur": "mengatur",
+        "1nempunyai": "mempunyai", "1nelakukan": "melakukan",
+        "1nemberikan": "memberikan", "1nasyarakat": "masyarakat",
+        "1naksud": "maksud", "1nengenai": "mengenai", "1nelalui": "melalui",
+        "1nasing-masing": "masing-masing",
+        "se1nua": "semua", "se1lama": "selama", "per1nah": "pernah",
+        "per1buatan": "perbuatan", "pe1mbagian": "pembagian",
+        "pe1mbentukan": "pembentukan", "pe1merintah": "pemerintah",
+        "pe1ngertian": "pengertian", "kepe1ntingan": "kepentingan",
+        "me1nang": "memang", "da1lam": "dalam", "Da1lam": "Dalam",
+        "Jern1an": "Jerman", "J ern1an": "Jerman",
+        "Oppenhein1": "Oppenheim", "1-Iart": "Hart",
+        "Beltefroid": "Bellefroid", "refom1asi": "reformasi",
+        "sip ii": "sipil", "salab": "salah", "jav,aban": "jawaban",
+        "javvaban": "jawaban", "se1nua": "semua", "kelo1npok": "kelompok",
+        "rnenjadi": "menjadi", "rnelaksanakan": "melaksanakan",
+        "rnelakukan": "melakukan", "rnerupakan": "merupakan",
+        "rnenurut": "menurut", "rnasih": "masih", "rnernpunyai": "mempunyai",
+        "rnernberikan": "memberikan", "rnasalah": "masalah",
+        "rnelalui": "melalui", "rnernang": "memang",
+        "n1": "m1",  # hanya sebagai tahap akhir untuk pola angka tertentu di bawah
     }
+
+    # Jangan menjalankan mapping "n1" secara global karena dapat merusak
+    # istilah lain. Hapus jika muncul sebagai efek samping.
+    replacements.pop("n1", None)
+
     for old, new in replacements.items():
+        text = text.replace(old, new)
+
+    # Koreksi angka/huruf yang sangat khas OCR pada nomor UU/pasal/tahun.
+    text = re.sub(r"\b20\s*l\s*l\b", "2011", text, flags=re.I)
+    text = re.sub(r"\b20\s*l\s*0\b", "2010", text, flags=re.I)
+    text = re.sub(r"\bNo1nor\b", "Nomor", text, flags=re.I)
+    text = re.sub(r"\bNo1nor\b", "Nomor", text, flags=re.I)
+    text = re.sub(r"\bTabun\b", "Tahun", text, flags=re.I)
+    text = re.sub(r"\bTa1un\b", "Tahun", text, flags=re.I)
+    text = re.sub(r"\bI\s*0\b", "10", text)
+    text = re.sub(r"\bl\s*0\b", "10", text)
+    text = re.sub(r"\b11/c\b", "II/c", text)
+
+    # Buang sisa nomor halaman yang tertanam di tengah pilihan.
+    text = re.sub(r"\s+\d+\s+Indroharto,.*?(?=$|\n)", " ", text, flags=re.I)
+    text = re.sub(r"\s+\d+\s+20005S62.*?(?=$|\n)", " ", text, flags=re.I)
+    text = re.sub(r"\s*20005S62.*?(?=$|\n)", " ", text, flags=re.I)
+
+    # OCR PDF sering membaca huruf "m" sebagai "n1" atau "111".
+    # Terapkan hanya pada pola yang berada di dalam kata, agar angka 111
+    # yang memang merupakan angka tidak ikut berubah.
+    text = re.sub(r"n1e1n", "mem", text, flags=re.I)
+    text = re.sub(r"(?<=[A-Za-zÀ-ÖØ-öø-ÿ])n1(?=[a-zA-ZÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<!\d)111(?=[a-zA-ZÀ-ÖØ-öø-ÿ])", "m", text)
+    text = re.sub(r"(?<=[a-zA-ZÀ-ÖØ-öø-ÿ])111(?=[a-zA-ZÀ-ÖØ-öø-ÿ])", "m", text)
+
+    # Beberapa bentuk OCR yang muncul berulang di bank soal.
+    wordfix = {
+        "n1e1npekerjakan": "mempekerjakan",
+        "n1e1nberikan": "memberikan",
+        "n1e1nberlakukan": "memberlakukan",
+        "n1e1nberikan": "memberikan",
+        "n1e1njadi": "menjadi",
+        "n1enjadi": "menjadi",
+        "n1engatur": "mengatur",
+        "n1erupakan": "merupakan",
+        "n1empunyai": "mempunyai",
+        "n1elakukan": "melakukan",
+        "n1emberikan": "memberikan",
+        "n1engenai": "mengenai",
+        "n1elalui": "melalui",
+        "n1asyarakat": "masyarakat",
+        "n1asing-masing": "masing-masing",
+        "pen1erintah": "pemerintah",
+        "Pen1erintah": "Pemerintah",
+        "pen1erintahan": "pemerintahan",
+        "pen1erintaban": "pemerintahan",
+        "pe1nberdayaan": "pemberdayaan",
+        "pe1nilihan": "pemilihan",
+        "pe1ngadaan": "pengadaan",
+        "pe1rlindungan": "perlindungan",
+        "per1aturan": "peraturan",
+        "ke1ompok": "kelompok",
+        "kelo1npok": "kelompok",
+        "dala1n": "dalam",
+        "Dala1n": "Dalam",
+        "se1nua": "semua",
+        "ter1nasuk": "termasuk",
+        "pe1nberian": "pemberian",
+        "pe1nempatan": "penempatan",
+        "pe1njelasan": "penjelasan",
+        "pe1mbagian": "pembagian",
+        "pe1mbentukan": "pembentukan",
+        "kepe1ntingan": "kepentingan",
+        "rnerupakan": "merupakan",
+        "rnenjadi": "menjadi",
+        "rnelakukan": "melakukan",
+        "rnernberikan": "memberikan",
+        "rnasalah": "masalah",
+        "rnasih": "masih",
+        "rnenurut": "menurut",
+    }
+    for old, new in wordfix.items():
         text = text.replace(old, new)
 
     text = text.replace("¬", "").replace("￾", "").replace("�", "")
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\s*\n\s*", "\n", text)
     text = re.sub(r"\s+([,.!?;:])", r"\1", text)
+    text = re.sub(r"\.{2,}", "…", text)
     return text.strip()
 
 
@@ -87,6 +204,101 @@ def get_item(idx):
         "key": clean_text(raw.get("key", "")),
     }
 
+
+def build_explanation(item):
+    """Pembahasan singkat: menjelaskan alasan pilihan benar berdasarkan isi soal.
+    Jika bank belum punya pembahasan khusus, gunakan pola penjelasan yang aman
+    dan tidak mengarang fakta di luar materi sumber.
+    """
+    explain = clean_text(item.get("explain", ""))
+    answer = item["answer"]
+    option = item["options"][answer]
+    q = clean_text(item.get("q", ""))
+    low = q.lower()
+    opt_low = option.lower()
+
+    generic = (
+        not explain
+        or "pahami kembali konsep yang diuji" in explain.lower()
+        or "berasal dari tes formatif pada materi sumber" in explain.lower()
+    )
+    if not generic:
+        return explain
+
+    # Pola khusus untuk soal berbasis ketentuan yang terlihat jelas di soal.
+    if "pasal 28" in low and "pp nomor 43 tahun 1998" in low and "100 orang" in opt_low:
+        return (
+            "Pilihan ini benar karena soal secara khusus merujuk Pasal 28 PP Nomor 43 Tahun 1998. "
+            "Materi menyatakan bahwa pengusaha harus mempekerjakan sekurang-kurangnya 1 orang "
+            "penyandang cacat yang memenuhi persyaratan jabatan dan kualifikasi pekerjaan untuk "
+            "setiap 100 orang pekerja. Jadi, angka 100 orang menjadi kata kunci soal ini."
+        )
+
+    # Soal 'kecuali': jelaskan bahwa pilihan benar adalah yang tidak termasuk.
+    if re.search(r"\bkecuali\b|\btidak termasuk\b|\bbukan\b", low):
+        return (
+            f"Jawaban {chr(65 + answer)} tepat karena pertanyaan meminta pilihan yang "
+            "tidak termasuk/merupakan pengecualian. Pilihan lainnya merupakan bagian dari "
+            "konsep atau ketentuan yang ditanyakan dalam materi, sedangkan pilihan ini adalah "
+            "yang menjadi pengecualian."
+        )
+
+    # Soal definisi/pengertian.
+    if re.search(r"\bpengertian\b|\bdefinisi\b|\bdiartikan\b|\bmaksud dari\b", low):
+        return (
+            f"Jawaban {chr(65 + answer)} tepat karena pilihan tersebut memuat unsur utama "
+            "dari pengertian/definisi yang diminta oleh soal. Kuncinya adalah mencocokkan "
+            "unsur dalam pertanyaan dengan rumusan konsep pada materi sumber."
+        )
+
+    # Soal yang meminta tokoh/pendapat.
+    if re.search(r"\bpendapat\b|\bmenurut\b|\bdiperkenalkan oleh\b|\bdikemukakan oleh\b", low):
+        return (
+            f"Jawaban {chr(65 + answer)} tepat karena soal sedang menguji keterkaitan "
+            f"konsep tersebut dengan tokoh/pendapat yang disebut dalam materi. "
+            f"Pilihan {chr(65 + answer)}, yaitu {option}, adalah nama/pendapat yang dipasangkan "
+            "dengan konsep tersebut dalam bank soal dari materi sumber."
+        )
+
+    # Soal dasar hukum/peraturan.
+    if re.search(r"\bdiatur\b|\bdasar hukum\b|\bketentuan\b|\buu nomor\b|\bpp nomor\b|\bpasal\b", low):
+        return (
+            f"Jawaban {chr(65 + answer)} tepat karena pertanyaan mencari dasar hukum atau "
+            f"ketentuan yang menjadi rujukan. Pilihan tersebut adalah rujukan yang dipasangkan "
+            "dengan materi pada sumber soal, sehingga bukan sekadar pilihan yang paling umum."
+        )
+
+    # Soal angka/waktu/jumlah.
+    if re.search(r"\bberapa\b|\bselama\b|\bsetiap\b|\bjumlah\b|\bjangka\b|\bhari\b|\bbulan\b|\btahun\b|\bpersen\b", low):
+        return (
+            f"Jawaban {chr(65 + answer)} tepat karena soal menguji angka/waktu/jumlah tertentu. "
+            f"Nilai yang harus diingat adalah {option}. Jadi, gunakan angka tersebut sebagai "
+            "kata kunci ketika menemukan soal dengan pola yang sama."
+        )
+
+    # Pilihan 'semua jawaban benar'.
+    if "semua jawaban" in opt_low and "benar" in opt_low:
+        return (
+            "Jawaban ini tepat karena pilihan-pilihan sebelumnya sama-sama sesuai dengan "
+            "konsep yang ditanyakan. Karena A, B, dan C tidak bertentangan dengan materi, "
+            "pilihan yang mencakup semuanya menjadi jawaban yang benar."
+        )
+
+    # Fallback yang tetap menjelaskan alasan tanpa mengarang ketentuan baru.
+    return (
+        f"Jawaban {chr(65 + answer)} tepat karena pilihan “{option}” paling sesuai dengan "
+        "fokus yang diminta dalam pertanyaan. Saat mengingat soal ini, cari kata kunci pada "
+        "pertanyaan lalu cocokkan dengan unsur yang terdapat pada pilihan tersebut."
+    )
+
+
+def build_memory_key(item):
+    answer = item["answer"]
+    option = item["options"][answer]
+    return (
+        f"Ingat {chr(65 + answer)} → {option}. "
+        f"Hubungkan jawaban ini dengan topik {item.get('module', '')}."
+    )
 
 # =========================
 # DATABASE
@@ -360,8 +572,8 @@ async def answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         record_answer(query.from_user.id, idx, correct)
 
         result = "✅ BENAR!" if correct else "❌ BELUM TEPAT"
-        explanation = item["explain"] or "Pembahasan belum tersedia pada bank soal."
-        key = item["key"] or "Kunci ingatan belum tersedia pada bank soal."
+        explanation = build_explanation(item)
+        key = build_memory_key(item)
 
         # Kirim hasil sebagai pesan baru. Ini sengaja dibuat lebih aman daripada
         # mengedit pesan soal yang sudah diklik.
