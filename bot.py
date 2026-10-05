@@ -7,7 +7,7 @@ import re
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
-DB = "quiz.db"
+DB = "quiz_stable.db"
 
 # =========================
 # BANK SOAL
@@ -396,8 +396,8 @@ async def answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         print("ERROR ANSWER:", repr(exc))
         try:
             await query.message.reply_text(
-                "⚠️ Soal ini bermasalah dan sudah saya lewati.\n"
-                "Tekan /kuis untuk melanjutkan."
+                "⚠️ Terjadi kesalahan teknis saat memproses jawaban.\n"
+                "Soal ini dilewati. Tekan /kuis untuk melanjutkan."
             )
         except Exception:
             pass
