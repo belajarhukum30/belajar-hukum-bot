@@ -997,18 +997,35 @@ async def send_question(chat_id, context, pool):
     context.user_data["last_qid"] = idx
     context.user_data["current_qid"] = idx
 
+    # Pada ponsel, teks tombol inline yang panjang sering terpotong.
+    # Karena itu, tampilkan seluruh pilihan jawaban sebagai teks pesan,
+    # sedangkan tombol cukup berupa A/B/C/D agar selalu terlihat utuh.
     keyboard = [
-        [InlineKeyboardButton(f"{chr(65+j)}. {option}", callback_data=f"ans:{idx}:{j}")]
-        for j, option in enumerate(item["options"][:4])
+        [InlineKeyboardButton("A", callback_data=f"ans:{idx}:0"),
+         InlineKeyboardButton("B", callback_data=f"ans:{idx}:1")],
+        [InlineKeyboardButton("C", callback_data=f"ans:{idx}:2"),
+         InlineKeyboardButton("D", callback_data=f"ans:{idx}:3")],
     ]
 
     header = f"📚 {item['course']}\n📖 {item['module']}"
     if item["test"]:
         header += f"\n📝 {item['test']}"
 
+    option_lines = []
+    for j, option in enumerate(item["options"][:4]):
+        option_lines.append(f"{chr(65+j)}. {option}")
+    options_text = "\n".join(option_lines)
+
+    message_text = (
+        f"{header}\n\n"
+        f"🧠 {item['q']}\n\n"
+        f"{options_text}\n\n"
+        f"👇 Pilih jawaban:"
+    )
+
     await context.bot.send_message(
         chat_id,
-        f"{header}\n\n🧠 {item['q']}",
+        message_text,
         reply_markup=InlineKeyboardMarkup(keyboard),
     )
 
